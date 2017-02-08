@@ -1,93 +1,281 @@
+/*! --------------------------------------------------------------------
+CSS
+
+* @Version:    1.0.0 - 2017
+* @author:     Daniel Torres (alexandre gomes)
+* @email:      daniel.torrer@gmail.com
+* @website:    gitlab.com/danieltorrer
+* @preserve
+-----------------------------------------------------------------------*/
+
 $icon-font-path: '../fonts/';
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+html, body {
+	height: 100%;
 }
 
-/* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+	background: #f0f0f0;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+* {
+	box-sizing: border-box;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
+/********
+m e n u
+********/
+nav {
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 900;
+    overflow: hidden;
+	background: #333333;
 
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
+	.menu-list {
+		position: relative;
+    	margin-bottom: 40px;
+		margin-top: 60px;
+    	width: 100%;
+
+		.menu-item{
+			position: relative;
+    		display: block;
+    		width: 100%;
+			padding-left: 0px;
+			margin-left: 0px;
+			font-size: 72px;
+
+			&.social-icons{
+				//text-align: center;
+				left: 50%;
+			    margin-left: -297px;
+
+				img{
+					margin: 0 30px;
+				}
+			}
+
+			a{
+				display: inline-block;
+			    position: relative;
+			    left: 50%;
+			    margin-left: -297px;
+			    white-space: nowrap;
+			    color: #fff;
+			}
+		}
+	}
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+/********
+h e a d e r
+********/
+
+header {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    color: #ffff;
+    z-index: 1000;
+    -webkit-transition: -webkit-transform .2s ease-out;
+    -ms-transition: -ms-transform .2s ease-out;
+    -moz-transition: -moz-transform .2s ease-out;
+    transition: transform .2s ease-out;
+
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
+.menu-btn {
+
+	position: absolute;
+    right: 22px;
+    top: 26px;
+    width: 28px;
+    height: 19px;
+    overflow: hidden;
+    z-index: 20;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+	a {
+		display: block;
+		position: absolute;
+		left: -11px;
+    	top: -15px;
+    	width: 50px;
+    	height: 50px;
+    	text-indent: -5555px;
+	}
+
+	.l1 {
+	    margin-top: -8px;
+	}
+
+	.l3 {
+	    margin-top: 8px;
+	}
+
+	span {
+		display: block;
+		width: 28px;
+		height: 3px;
+		background: #fff;
+		position: absolute;
+		left: 0;
+		top: 8px;
+		border-radius: 3px;
+		-webkit-background-clip: padding-box;
+		-moz-background-clip: padding-box;
+		background-clip: padding-box;
+		-webkit-transition: margin .13s ease-out .23s,opacity .13s ease-out .23s,-webkit-transform .13s ease-out,background .14s linear;
+		-moz-transition: margin .13s ease-out .23s,opacity .13s ease-out .23s,-moz-transform .13s ease-out,background .14s linear;
+		-ms-transition: margin .13s ease-out .23s,opacity .13s ease-out .23s,-ms-transform .13s ease-out,background .14s linear;
+		transition: margin .13s ease-out .23s,opacity .13s ease-out .23s,transform .13s ease-out,background .14s linear;
+	}
+
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
+.menu-btn-back {
+
+	position: absolute;
+	right: 22px;
+	top: 26px;
+	width: 28px;
+	height: 19px;
+	overflow: hidden;
+	z-index: 20;
+	-webkit-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
-  }
+
+/******
+S l i d e
+******/
+
+.slide-wrapper {
+
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    // overflow: hidden;
+    z-index: 10;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+.slide {
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
+	background: rgba(190, 100, 100, 0.6);
+    //position: fixed;
+    //top: 0;
+    //left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    // -webkit-transform: translateY(100%);
+    // -ms-transform: translateY(100%);
+    // transform: translateY(100%);
+}
 
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
+.movilidad-categoria:hover {
 
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+	.movilidad-descripcion {
+		visibility: visible;
+	}
+}
+
+.movilidad-descripcion {
+	visibility: hidden;
+}
+
+
+.home {
+	background: #0fefff;
+}
+
+.about {
+	background: #f0ff00;
+}
+
+/*******
+c o r e
+c l a s s e s
+*******/
+
+.menu-opened{
+	overflow: hidden;
+    background: #e1e8eb;
+}
+
+.scroll-item {
+	display: block;
+	position: absolute;
+	left: calc(50% - 40px);
+	bottom: 30px;
+}
+
+.full-image {
+	width: 100%;
+	height: auto;
+}
+
+.valign{
+	width: 100%;
+	display: table;
+}
+
+.valign-item {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.valign-bottom {
+	vertical-align: bottom;
+}
+
+.news-title {
+	margin-bottom: 60px;
+}
+
+.news-item{
+	background: white;
+	padding: 30px 45px;
+
+	p {
+		font-size: 12px;
+	}
+
+	&.medium-item{
+		height: 300px;
+	}
+
+	&.small-item {
+		height: 150px;
+
+	}
+
+	&:nth-child(2){
+		background: tomato;
+	}
 }
