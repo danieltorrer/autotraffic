@@ -4,7 +4,7 @@
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.1",
-    "jquery.scrollTo": "^2.1.2"
+    "skrollr-decks": "^1.0.5"
   },
   "overrides": {
     "bootstrap-sass": {

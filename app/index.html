@@ -27,7 +27,7 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-	<nav class="hide">
+	<nav class="hide menu-container">
 		<ul class="menu-list ">
 			<li class="menu-item"><a href="#">Nosotros</a></li>
 			<li class="menu-item"><a href="#">Movilidad 3.0</a></li>
@@ -53,8 +53,21 @@
   		</p>
 	</header>
 
-	<main>
-		<div class="slide-wrapper fixed">
+	<main class="skrollr-decks-init" data-skrollr-decks-history="true">
+
+    <nav class="nav-home" aria-hidden="true">
+            <ul>
+                <li class="active" data-url="ourintro"><span>Intro</span></li>
+                <li data-url="ourmarkets" class=""><span>Markets</span></li>
+                <li data-url="ourcompany" class=""><span>Company</span></li>
+                <li data-url="ournews"><span>News</span></li>
+                <li data-url="ourproducts"><span>Products</span></li>
+            </ul>
+        </nav>
+
+
+		<div class="skrollr-body">
+		<!-- <div class="slide-wrapper fixed skrollr-body"> -->
 
 			<!--  Home starts -->
 			<div class="home valign slide">
@@ -209,6 +222,26 @@
 				</div>
 			</div>
 			<!--  News ends  -->
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <ul class="links">
+                <li>Nosotros</li>
+                <li>Movilidad 3.0</li>
+                <li>Noticias</li>
+                <li>Clientes</li>
+                <li>Contacto</li>
+              </ul>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-sm-4">
+              <img src="http://www.placehold.it/100x30" alt="">
+              <p>blanditiis sunt obcaecati illo inventore voluptatum pariatur fugiat natus. Molestiae odit rerum vel.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
 		</div>
 	</main>
 
@@ -227,7 +260,8 @@
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/modernizr/modernizr.js"></script>
-    <script src="/bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
+    <script src="/bower_components/skrollr/src/skrollr.js"></script>
+    <script src="/bower_components/skrollr-decks/dist/skrollr.decks.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

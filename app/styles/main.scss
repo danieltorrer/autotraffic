@@ -29,26 +29,76 @@ body {
 /********
 m e n u
 ********/
-nav {
+nav.nav-home {
+	display: block;
 	position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 900;
-    overflow: hidden;
+	top: 50%;
+	margin-top: -38px;
+	right: 20px;
+	z-index: 100;
+
+	ul {
+		list-style: none;
+
+		li {
+			position: relative;
+			width: 12px;
+			height: 12px;
+			margin: 12px 0;
+			cursor: pointer;
+
+			span {
+				position: relative;
+				top: 0;
+				left: 0;
+				display: block;
+				float: none;
+				width: 12px;
+				height: 12px;
+				border-radius: 12px 12px;
+				border: 2px solid #fff;
+				background: 0 0;
+				text-indent: -5555px;
+			}
+
+			&.active{
+				pointer-events: none;
+
+				span {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 12px;
+					height: 12px;
+					border-radius: 12px 12px;
+					border: 2px solid #fff;
+					background: #fff;
+				}
+			}
+		}
+	}
+}
+
+nav.menu-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 900;
+	overflow: hidden;
 	background: #333333;
 
 	.menu-list {
 		position: relative;
-    	margin-bottom: 40px;
+		margin-bottom: 40px;
 		margin-top: 60px;
-    	width: 100%;
+		width: 100%;
 
 		.menu-item{
 			position: relative;
-    		display: block;
-    		width: 100%;
+			display: block;
+			width: 100%;
 			padding-left: 0px;
 			margin-left: 0px;
 			font-size: 72px;
@@ -56,7 +106,7 @@ nav {
 			&.social-icons{
 				//text-align: center;
 				left: 50%;
-			    margin-left: -297px;
+				margin-left: -297px;
 
 				img{
 					margin: 0 30px;
@@ -65,11 +115,11 @@ nav {
 
 			a{
 				display: inline-block;
-			    position: relative;
-			    left: 50%;
-			    margin-left: -297px;
-			    white-space: nowrap;
-			    color: #fff;
+				position: relative;
+				left: 50%;
+				margin-left: -297px;
+				white-space: nowrap;
+				color: #fff;
 			}
 		}
 	}
@@ -81,50 +131,50 @@ h e a d e r
 
 header {
 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    color: #ffff;
-    z-index: 1000;
-    -webkit-transition: -webkit-transform .2s ease-out;
-    -ms-transition: -ms-transform .2s ease-out;
-    -moz-transition: -moz-transform .2s ease-out;
-    transition: transform .2s ease-out;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	color: #ffff;
+	z-index: 1000;
+	-webkit-transition: -webkit-transform .2s ease-out;
+	-ms-transition: -ms-transform .2s ease-out;
+	-moz-transition: -moz-transform .2s ease-out;
+	transition: transform .2s ease-out;
 
 }
 
 .menu-btn {
 
 	position: absolute;
-    right: 22px;
-    top: 26px;
-    width: 28px;
-    height: 19px;
-    overflow: hidden;
-    z-index: 20;
-    -webkit-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
+	right: 22px;
+	top: 26px;
+	width: 28px;
+	height: 19px;
+	overflow: hidden;
+	z-index: 20;
+	-webkit-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
 
 	a {
 		display: block;
 		position: absolute;
 		left: -11px;
-    	top: -15px;
-    	width: 50px;
-    	height: 50px;
-    	text-indent: -5555px;
+		top: -15px;
+		width: 50px;
+		height: 50px;
+		text-indent: -5555px;
 	}
 
 	.l1 {
-	    margin-top: -8px;
+		margin-top: -8px;
 	}
 
 	.l3 {
-	    margin-top: 8px;
+		margin-top: 8px;
 	}
 
 	span {
@@ -165,37 +215,52 @@ header {
 
 
 /******
+f o o t e r
+******/
+
+footer {
+	padding: 30px 0;
+
+	ul {
+		list-style: none;
+		li {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+/******
 S l i d e
 ******/
 
 .slide-wrapper {
 
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    // overflow: hidden;
-    z-index: 10;
-    -webkit-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    transform: translateZ(0);
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	// overflow: hidden;
+	z-index: 10;
+	-webkit-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
 }
 
 .slide {
 
 	background: rgba(190, 100, 100, 0.6);
-    //position: fixed;
-    //top: 0;
-    //left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    // -webkit-transform: translateY(100%);
-    // -ms-transform: translateY(100%);
-    // transform: translateY(100%);
+	//position: fixed;
+	//top: 0;
+	//left: 0;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	// -webkit-transform: translateY(100%);
+	// -ms-transform: translateY(100%);
+	// transform: translateY(100%);
 }
 
 .movilidad-categoria:hover {
@@ -225,7 +290,7 @@ c l a s s e s
 
 .menu-opened{
 	overflow: hidden;
-    background: #e1e8eb;
+	background: #e1e8eb;
 }
 
 .scroll-item {
@@ -277,5 +342,16 @@ c l a s s e s
 
 	&:nth-child(2){
 		background: tomato;
+	}
+}
+
+.button {
+
+	.button-primary{
+
+	}
+
+	.button-default{
+
 	}
 }
