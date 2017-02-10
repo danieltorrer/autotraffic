@@ -8,4 +8,11 @@ $(document).ready(function(){
 		$('body').toggleClass('menu-opened');
 	});
 
+	$('.nav-home li').click( function (e) {
+		skrollr.decks.animateTo( $(this).attr('data-href') );
+		$('.nav-home li').removeClass('active');
+		$(this).addClass('active');
+		e.preventDefault();
+	});
+
 });
