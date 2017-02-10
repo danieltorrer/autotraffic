@@ -14,6 +14,10 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700');
+
+
 * {
 	box-sizing: border-box !important;
 }
@@ -26,9 +30,25 @@ body {
 	background: #f0f0f0;
 }
 
+
+h1, h2, h3, h4 ,h5 ,h6 {
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+
+a, p, li, span {
+	font-family: 'Lato', sans-serif;
+}
 /********
 m e n u
 ********/
+.font-title {
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.font-text {
+	font-family: 'Lato', sans-serif;
+}
+
 nav.nav-home {
 	display: block;
 	position: fixed;
@@ -144,6 +164,10 @@ header {
 	transition: transform .2s ease-out;
 	padding: 15px 30px;
 
+	h1 {
+		display: inline-block;
+	}
+
 	img {
 		width: 180px;
 		height: auto;
@@ -227,10 +251,33 @@ f o o t e r
 footer {
 	padding: 30px 0;
 
+	.legal {
+		vertical-align: bottom;
+
+		img {
+			margin-top: 30px;
+			margin-bottom: 15px;
+		}
+	}
+
 	ul {
 		list-style: none;
 		li {
 			margin-bottom: 15px;
+		}
+	}
+
+	p {
+		color: #262121;
+
+		a {
+			color: #f42533;
+			text-decoration: none;
+
+			&:hover {
+				color: #f42533;
+				text-decoration: none;
+			}
 		}
 	}
 }
@@ -289,18 +336,6 @@ S l i d e
 	// -ms-transform: translateY(100%);
 	// transform: translateY(100%);
 }
-
-.movilidad-categoria:hover {
-
-	.movilidad-descripcion {
-		visibility: visible;
-	}
-}
-
-.movilidad-descripcion {
-	visibility: hidden;
-}
-
 .scale-img {
 	width: 70%;
 	height: auto;
@@ -318,19 +353,75 @@ S l i d e
 	h2 {
 		color: white;
 		text-transform: uppercase;
-		font-weight: bold;
+		font-weight: 700;
+		font-size: 48px;
 		span {
+
 			font-weight: normal;
 		}
 	}
 }
 
+#movilidad,
 .movilidad-deck {
+	background: url(../images/bike-b.jpg) no-repeat center center;
+
+	.movilidad-title {
+		margin-bottom: 30px;
+
+		h2 {
+			color: white;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+		p {
+			color: white;
+		}
+	}
+
+	.movilidad-categoria {
+		position: relative;
+		padding: 45px 0;
+		border: 1px solid rgba(255, 255, 255, 0);
+
+		img {
+			width: 55px;
+			height: auto;
+		}
+		p {
+			color: #fff;
+			text-transform: uppercase;
+			margin-top: 15px;
+		}
+	}
+
+	.movilidad-categoria:hover {
+		border: 1px solid rgba(255, 255, 255, 0.3);
+
+		.movilidad-descripcion {
+			visibility: visible;
+		}
+	}
+
+	.movilidad-descripcion {
+		visibility: hidden;
+		// background: rgba(0, 0, 0, 0.3);
+		width: 100%;
+		position: absolute;
+		left: 0;
+		bottom: -25px;
+	}
 
 }
 
 .about {
-	background: #f0ff00;
+	background: #22c9d9;
+
+	h4 {
+		font-size: 24px;
+		color: white;
+	}
 }
 
 .one-seguridad {
@@ -557,34 +648,34 @@ s i n g l e
 
 	padding-top: 60px;
 
-	 h3 {
-		 font-weight: normal;
+	h3 {
+		font-weight: normal;
 		margin-bottom: 60px;
 
-		 span {
-			 font-weight: bold;
-		 }
-	 }
+		span {
+			font-weight: bold;
+		}
+	}
 
-	 .related-item {
-		 margin-bottom: 30px;
+	.related-item {
+		margin-bottom: 30px;
 
-		 .solution-description {
-			 h4 {
-				 font-weight: normal;
-				 font-size: 24px;
-				 margin-bottom: 30px;
-			 }
+		.solution-description {
+			h4 {
+				font-weight: normal;
+				font-size: 24px;
+				margin-bottom: 30px;
+			}
 
-			 a {
-				 font-weight: bold;
-			 }
-		 }
+			a {
+				font-weight: bold;
+			}
+		}
 
-		 &:last-child {
-			 margin-bottom: 90px;
-		 }
-	 }
+		&:last-child {
+			margin-bottom: 90px;
+		}
+	}
 }
 
 /*******
@@ -641,21 +732,21 @@ c o n t a c t
 		color: white;
 
 		&::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #7f7e7e;
+			color:    #7f7e7e;
 		}
 
 		&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-		   color:    #7f7e7e;
-		   opacity:  1;
+			color:    #7f7e7e;
+			opacity:  1;
 		}
 
 		&::-moz-placeholder { /* Mozilla Firefox 19+ */
-		   color:    #7f7e7e;
-		   opacity:  1;
+			color:    #7f7e7e;
+			opacity:  1;
 		}
 
 		&:-ms-input-placeholder { /* Internet Explorer 10-11 */
-		   color:    #7f7e7e;
+			color:    #7f7e7e;
 		}
 	}
 
@@ -702,6 +793,21 @@ c o n t a c t
 c o r e
 c l a s s e s
 *******/
+
+.line {
+	width: 50px;
+	height: 5px;
+	background: white;
+	display: inline-block;
+
+	&.line-margin {
+		margin-top: 30px;
+	}
+
+	&.full {
+		width: 100%;
+	}
+}
 
 .google-maps {
 	color: #e12d35;
@@ -751,29 +857,71 @@ c l a s s e s
 
 .news-title {
 	margin-bottom: 60px;
+
+	.col-sm-3 {
+		vertical-align: top;
+	}
+
+	.col-sm-7 {
+		vertical-align: top;
+
+		h2 {
+			text-transform: uppercase;
+			margin: 0;
+			padding: 0;
+			font-weight: normal;
+
+			span {
+				font-weight: bold;
+			}
+		}
+
+		h4 {
+			text-transform: uppercase;
+
+			span {
+				color: #e22d35;
+			}
+		}
+	}
 }
 
 .news-item{
 	background: white;
 	padding: 30px 45px;
 	color: #333;
+	text-align: left;
+	background: url(http://www.placehold.it/600x300) no-repeat center center;
+	background-size: cover;
+
+	h5 {
+		color: white;
+		font-size: 24px;
+	}
 
 	p {
-		font-size: 12px;
+		color: white;
+		font-size: 36px;
 	}
 
 	&.medium-item{
-		height: 300px;
+		height: 400px;
+		background: url(http://www.placehold.it/600x600) no-repeat center center;
+
 	}
 
 	&.small-item {
-		height: 150px;
-		background: tomate;
+		height: 200px;
+
+		p {
+			font-size: 18px;
+		}
+
+		&.no-bg {
+			background: tomato;
+		}
 	}
 
-	&:nth-child(2){
-		background: tomato;
-	}
 }
 
 .scroll-item-small{
@@ -784,7 +932,16 @@ c l a s s e s
 	text-transform: uppercase;
 
 	&.button-primary{
+		border-radius: 100px;
+		background: #c3d102;
+		width: 64px;
+		padding: 10px 20px;
+		color: white;
+		font-size: 36px;
 
+		&.red {
+
+		}
 	}
 
 	&.button-default{
@@ -793,6 +950,22 @@ c l a s s e s
 		border: 1px solid white;
 		padding: 15px 10px;
 		display: inline-block;
+
+		&::after {
+			background: url(../images/arrow-icon.png) no-repeat;
+			content: "";
+			width: 30px;
+			height: 30px;
+			// top: 10px;
+			// right: 5px;
+			// position: absolute;
+			display: inline-block;
+			width: 5px;
+			height: 9px;
+			margin-left: 15px;
+			margin-right: 5px;
+
+		}
 
 		img {
 			vertical-align: top;
