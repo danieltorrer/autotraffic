@@ -14,16 +14,16 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+* {
+	box-sizing: border-box !important;
+}
+
 html, body {
 	height: 100%;
 }
 
 body {
 	background: #f0f0f0;
-}
-
-* {
-	box-sizing: border-box;
 }
 
 /********
@@ -142,6 +142,12 @@ header {
 	-ms-transition: -ms-transform .2s ease-out;
 	-moz-transition: -moz-transform .2s ease-out;
 	transition: transform .2s ease-out;
+	padding: 15px 30px;
+
+	img {
+		width: 180px;
+		height: auto;
+	}
 
 }
 
@@ -295,9 +301,32 @@ S l i d e
 	visibility: hidden;
 }
 
+.scale-img {
+	width: 70%;
+	height: auto;
+}
+
 
 .home {
-	background: #0fefff;
+	background: tomato;
+
+	.logo-icon {
+		width: 60px;
+		height: auto;
+	}
+
+	h2 {
+		color: white;
+		text-transform: uppercase;
+		font-weight: bold;
+		span {
+			font-weight: normal;
+		}
+	}
+}
+
+.movilidad-deck {
+
 }
 
 .about {
@@ -349,10 +378,340 @@ S l i d e
 
 }
 
+.solution-item {
+	position: relative;
+
+	.solution-description {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 60px 90px 30px 90px;
+		background: rgba(0, 0, 0, 0.3);
+
+		h4 {
+			color: white;
+			font-weight: bold;
+			font-size: 28px;
+			margin: 0;
+			span {
+				font-weight: normal;
+			}
+		}
+
+		a {
+			color: white;
+			text-decoration: none;
+		}
+	}
+
+	&.small {
+		.solution-description {
+			padding: 30px 90px 30px 90px;
+		}
+	}
+}
+
+
+.book {
+	padding: 90px 0;
+
+	h4 {
+		font-size: 34px;
+		margin-bottom: 60px;
+
+		span {
+			font-weight: bold;
+		}
+	}
+
+	p {
+		margin-bottom: 30px;
+	}
+
+	span {
+		font-weight: bold;
+	}
+}
+
+.everything {
+	padding: 90px 0;
+	background: #ddd;
+
+	.everything-item {
+
+		h4 {
+			margin: 0;
+			font-size: 28px;
+			span {
+				font-weight: bold;
+			}
+		}
+
+		.valign-item {
+			vertical-align: top;
+		}
+
+	}
+
+	.everything-title {
+		padding-left: 270px;
+	}
+}
+
+.see-more {
+
+	.col-sm-6 {
+		//display: table;
+		// position: relative;
+		height: 225px;
+	}
+
+	.see-img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.see-description {
+		position: relative;
+		background: url("http://www.placehold.it/600x200") no-repeat center center;
+		background-size: cover;
+		// z-index: 2;
+		//padding: 60px;
+		// background: rgba(0, 0, 0, 0.3);
+		text-align: center;
+		margin: 0;
+		display: table;
+		vertical-align: middle;
+		height: 100%;
+		width: 100%;
+
+		.see-content {
+			display: table-cell;
+			width: 100%;
+			vertical-align: middle;
+		}
+
+		h4 {
+			text-transform: uppercase;
+		}
+	}
+
+}
+
+/********
+s i n g l e
+********/
+
+.single-cover {
+	background: url(http://www.placehold.it/1000x600) no-repeat center center;
+	background-size: cover;
+
+	.container {
+		height: 100%;
+	}
+
+	.single-cover-container {
+		height: 100%;
+		width: 100%;
+		display: table;
+
+
+		.single-cover-content {
+			display: table-cell;
+			width: 100%;
+			vertical-align: bottom;
+			padding-bottom: 60px;
+			.single-date {
+				font-size: small;
+			}
+		}
+	}
+}
+
+.single-content {
+	background: white;
+	padding-top: 90px;
+
+	.single-social {
+		margin-top: 60px;
+
+		span {
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+		img {
+			margin: 0 15px;
+		}
+		margin-bottom: 60px;
+	}
+}
+
+.single-related {
+
+	padding-top: 60px;
+
+	 h3 {
+		 font-weight: normal;
+		margin-bottom: 60px;
+
+		 span {
+			 font-weight: bold;
+		 }
+	 }
+
+	 .related-item {
+		 margin-bottom: 30px;
+
+		 .solution-description {
+			 h4 {
+				 font-weight: normal;
+				 font-size: 24px;
+				 margin-bottom: 30px;
+			 }
+
+			 a {
+				 font-weight: bold;
+			 }
+		 }
+
+		 &:last-child {
+			 margin-bottom: 90px;
+		 }
+	 }
+}
+
+/*******
+c o n t a c t
+*******/
+
+.contact-cover {
+	background: url(http://www.placehold.it/1000x600) no-repeat center center;
+	background-size: cover;
+
+	.container {
+		height: 100%;
+	}
+
+	.contact-cover-container {
+		display: table;
+		height: 100%;
+	}
+
+	.contact-cover-content {
+		display: table-cell;
+		vertical-align: middle;
+
+	}
+}
+
+.address {
+	padding: 60px 0;
+
+	.address-text {
+		padding-top: 60px;
+	}
+}
+
+.contact-form {
+	background: #333;
+	padding: 60px 0;
+
+	form {
+		margin-top: 60px;
+	}
+
+	label {
+		color: white;
+		margin-bottom: 15px;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	textarea {
+		background: none;
+		border-radius: 0;
+		padding: 10px 30px;
+		color: white;
+
+		&::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #7f7e7e;
+		}
+
+		&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		   color:    #7f7e7e;
+		   opacity:  1;
+		}
+
+		&::-moz-placeholder { /* Mozilla Firefox 19+ */
+		   color:    #7f7e7e;
+		   opacity:  1;
+		}
+
+		&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		   color:    #7f7e7e;
+		}
+	}
+
+	.form-control {
+		height: 50px;
+	}
+
+	textarea.form-control {
+		height: inherit;
+	}
+
+	h3 {
+		font-weight: normal;
+		color: #fff;
+		font-size: 36px;
+		span {
+			font-weight: bold;
+		}
+	}
+
+	.contact-lider {
+
+		h5 {
+			color: white;
+			font-size: 24px;
+		}
+
+		ul {
+			list-style: none;
+
+			li {
+				color: white;
+				margin-bottom: 15px;
+
+				img {
+					margin-right: 15px;
+				}
+			}
+		}
+	}
+}
+
 /*******
 c o r e
 c l a s s e s
 *******/
+
+.google-maps {
+	color: #e12d35;
+	text-transform: uppercase;
+
+	&:hover {
+		color: #e12d35;
+		text-decoration: none;
+	}
+}
 
 .menu-opened{
 	overflow: hidden;
@@ -385,6 +744,11 @@ c l a s s e s
 	vertical-align: bottom;
 }
 
+#news {
+	background: #333;
+	color: white;
+}
+
 .news-title {
 	margin-bottom: 60px;
 }
@@ -392,6 +756,7 @@ c l a s s e s
 .news-item{
 	background: white;
 	padding: 30px 45px;
+	color: #333;
 
 	p {
 		font-size: 12px;
@@ -403,7 +768,7 @@ c l a s s e s
 
 	&.small-item {
 		height: 150px;
-
+		background: tomate;
 	}
 
 	&:nth-child(2){
@@ -416,12 +781,42 @@ c l a s s e s
 }
 
 .button {
+	text-transform: uppercase;
 
-	.button-primary{
-
-	}
-
-	.button-default{
+	&.button-primary{
 
 	}
+
+	&.button-default{
+		color: white;
+		margin-top: 10px;
+		border: 1px solid white;
+		padding: 15px 10px;
+		display: inline-block;
+
+		img {
+			vertical-align: top;
+			margin-top: 4px;
+			margin-right: 10px;
+		}
+
+		&.button-big {
+			background: none;
+			padding: 20px;
+
+			span {
+				margin-right: 30px;
+			}
+		}
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+
+}
+
+.no-space {
+	padding: 0;
+	margin: 0;
 }
