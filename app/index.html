@@ -29,6 +29,7 @@
 
   <nav class="hide menu-container">
     <ul class="menu-list ">
+      <li class="menu-item"><a href="#">Inicio</a></li>
       <li class="menu-item"><a href="#">Nosotros</a></li>
       <li class="menu-item"><a href="#">Movilidad 3.0</a></li>
       <li class="menu-item"><a href="#">Casos de éxito</a></li>
@@ -87,7 +88,7 @@ data-top-bottom="transform: translateY(-100%);">
   <!--  Home starts -->
   <!-- <div class="home valign slide"> -->
   <!-- <section class="skrollr-deck float-void" id="home"></section> -->
-  <div id="home" class="home valign skrollr-deck">
+  <div id="home" class="home valign skrollr-decks slide">
     <div class="valign-item">
       <div class="container">
         <div class="row">
@@ -108,14 +109,14 @@ data-top-bottom="transform: translateY(-100%);">
   </div>
   <!--  Home ends  -->
   <!--  Movilidad starts -->
-  <section class="skrollr-deck valign" id="movilidad">
+  <section class="skrollr-deck valign slide" id="movilidad">
     <div class="valign-item">
       <div class="container">
         <div class="row">
 
           <div class="col-sm-6 col-sm-offset-3 text-center movilidad-title">
             <h2 class="font-text">Movilidad 3.0</h2>
-            <p>Integra los 3 ejes principales de una política pública que mejore la movilidad en las urbes del mundo a través de un modelo de servicio autofinanciable para los entes de gobierno.</p>
+            <p class="font-title">Integra los 3 ejes principales de una política pública que mejore la movilidad en las urbes del mundo a través de un modelo de servicio autofinanciable para los entes de gobierno.</p>
           </div>
 
           <div class="col-sm-4 text-center">
@@ -166,7 +167,7 @@ data-top-bottom="transform: translateY(-100%);">
   <!--  Movilidad ends-->
 
   <!--  About starts -->
-  <div id="about" class="about valign skrollr-deck">
+  <div id="about" class="about valign skrollr-deck slide">
     <div class="valign-item">
       <div class="container">
         <div class="row">
@@ -176,7 +177,7 @@ data-top-bottom="transform: translateY(-100%);">
                 <img src="http://www.placehold.it/150x150" alt="">
               </div>
               <div class="line line-margin"></div>
-              <h4>LíDER en soluiciones de <br>movilidad urbana </h4>
+              <h4 class="font-text">LíDER en soluciones de <br>movilidad urbana </h4>
               <p>
                 <a href="#" class="button button-default">
                   Nosotros
@@ -188,66 +189,102 @@ data-top-bottom="transform: translateY(-100%);">
       </div>
 
       <!-- <div class="scroll-item text-center">
-        <p><img src="http://www.placehold.it/80x80" alt=""></p>
-      </div> -->
-
-    </div>
-  </div>
-  <!--  About ends  -->
-
-  <!--  News starts -->
-  <!-- <section class="skrollr-deck float-void" id="news"></section> -->
-  <div id="news" class="news valign skrollr-deck">
-    <div class="valign-item valign-bottom">
-      <div class="container">
-        <div class="row news-title">
-          <div class="col-sm-3">
-            <div class="line full"></div>
-          </div>
-          <div class="col-sm-7 text-left">
-            <h2><span>Más de</span> nosotros</h2>
-            <h4><span>Noticias</span> destacadas</h4>
-
-          </div>
-          <div class="col-sm-2">
-            <a class="button button-default" href="#">Ver todos
-              <!-- <img src="http://www.placehold.it/6x12" alt=""> -->
-            </a>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-5 news-item medium-item">
-            <h5>Noticias</h5>
-            <p>Lorem ipsum quasi repellat ipsam.</p>
-          </div>
-
-          <div class="col-sm-7">
-            <div class="row">
-              <div class="col-sm-12 news-item small-item">
-                <h5>Noticias</h5>
-                <p>Lorem ipsum! Consequuntur rerum, deserunt.</p>
-              </div>
-
-              <div class="col-sm-6 news-item small-item no-bg">
-                <h5>Noticias</h5>
-                <p>Lorem ipsum, quae accusamus officia.</p>
-              </div>
-              <div class="col-sm-6 news-item small-item no-bg">
-                <h5>Noticias</h5>
-                <p>Lorem ipsum Unde eligendi, molestias deserunt quia.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- <div class="scroll-item text-center">
       <p><img src="http://www.placehold.it/80x80" alt=""></p>
     </div> -->
 
   </div>
 </div>
+<!--  About ends  -->
+
+<!--  News starts -->
+<!-- <section class="skrollr-deck float-void" id="news"></section> -->
+<div id="news" class="news skrollr-deck slide">
+
+  <div class="container">
+    <div class="row news-title">
+      <div class="col-sm-3">
+        <div class="line full"></div>
+      </div>
+      <div class="col-sm-6 text-left">
+        <h2 class="font-text"><span>Más de</span> nosotros</h2>
+        <h4 class="font-text"><span>Noticias</span> destacadas</h4>
+      </div>
+
+      <div class="col-sm-2">
+        <a class="button button-default" href="#">Ver todos
+          <!-- <img src="http://www.placehold.it/6x12" alt=""> -->
+        </a>
+      </div>
+    </div>
+
+    <div class="row news-container">
+      <div class="col-sm-5 news-item medium-item">
+        <div>
+          <h5 class="font-title">Noticias</h5>
+          <p>Lorem ipsum quasi repellat ipsam.</p>
+          <a href="#" class="button button-primary button-red">+</a>
+        </div>
+      </div>
+
+      <div class="col-sm-7">
+        <div class="row">
+
+          <div class="col-sm-12 news-item small-item">
+            <div>
+              <h5 class="font-title">Noticias</h5>
+              <p>Lorem ipsum! Consequuntur rerum, deserunt.</p>
+              <a href="" class="button button-primary button-red">+</a>
+            </div>
+          </div>
+
+          <div class="col-sm-6 news-item small-item no-bg">
+            <div>
+              <h5 class="font-title">Noticias</h5>
+              <p>Lorem ipsum, quae accusamus officia.</p>
+              <a href="" class="button button-primary button-red">+</a>
+            </div>
+          </div>
+
+          <div class="col-sm-6 news-item small-item no-bg no-bg-white">
+            <div>
+              <h5 class="font-title">Noticias</h5>
+              <p>Lorem ipsum Unde eligendi, molestias deserunt quia.</p>
+              <a href="#" class="button button-primary button-red">+</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="scroll-item text-center">
+  <p><img src="http://www.placehold.it/80x80" alt=""></p>
+</div> -->
+
+</div>
+
+<!--  newsletter starts -->
+
+<section class="newsletter">
+  <div class="container valign">
+    <div class="row valign-item">
+      <div class="col-sm-6 col-sm-offset-3">
+        <div class="text-center">
+          <h3 class="font-title white-text">boletín de noticias</h3>
+          <p class="font-title white-text">¿Te gustaría recibir las noticias más recientes de Autotraffic?</p>
+          <div class="newsletter-form">
+            <input class="form-control bg" type="text" placeholder="Escribe tu correo">
+            <img class="icon-form" src="images/send-icon.png" alt="#">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--  newsletter ends -->
+
+
 <!--  News ends  -->
 <footer>
   <div class="container">

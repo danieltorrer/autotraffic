@@ -18,6 +18,16 @@ $icon-font-path: '../fonts/';
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700');
 
 
+//Colors
+$primary-red: #e22d35;
+$default-text-color: #262121;
+$secondary-text-color: #c6c6c6;
+$primary-green: #c3d102;
+
+$movilidad-green : #c3d102;
+$movilidad-blue: #41b4bf;
+$movilidad-pink: #ea094b;
+
 * {
 	box-sizing: border-box !important;
 }
@@ -26,17 +36,47 @@ html, body {
 	height: 100%;
 }
 
-body {
-	background: #f0f0f0;
-}
 
-
-h1, h2, h3, h4 ,h5 ,h6 {
+h1, h2, h3, h4 ,h5 ,h6, label {
 	font-family: 'PT Sans Narrow', sans-serif;
+	color: $default-text-color;
 }
 
 a, p, li, span {
 	font-family: 'Lato', sans-serif;
+	color: $default-text-color;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+	font-family: 'PT Sans Narrow', sans-serif;
+	background: none;
+	border-radius: 0;
+	padding: 10px 30px;
+	color: white;
+
+	&::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+		color:    #7f7e7e;
+	}
+
+	&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		color:    #7f7e7e;
+		opacity:  1;
+	}
+
+	&::-moz-placeholder { /* Mozilla Firefox 19+ */
+		color:    #7f7e7e;
+		opacity:  1;
+	}
+
+	&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		color:    #7f7e7e;
+	}
+}
+
+input.bg {
+	background: white;
 }
 /********
 m e n u
@@ -108,20 +148,25 @@ nav.menu-container {
 	z-index: 900;
 	overflow: hidden;
 	background: #333333;
+	overflow-y: visible !important;
+
 
 	.menu-list {
+		overflow-y: visible !important;
 		position: relative;
 		margin-bottom: 40px;
 		margin-top: 60px;
 		width: 100%;
 
 		.menu-item{
+			text-transform: uppercase;
 			position: relative;
 			display: block;
 			width: 100%;
 			padding-left: 0px;
 			margin-left: 0px;
-			font-size: 72px;
+			font-size: 36px;
+			margin-bottom: 40px;
 
 			&.social-icons{
 				//text-align: center;
@@ -250,6 +295,7 @@ f o o t e r
 
 footer {
 	padding: 30px 0;
+	// background: #f0f0f0;
 
 	.legal {
 		vertical-align: bottom;
@@ -264,11 +310,15 @@ footer {
 		list-style: none;
 		li {
 			margin-bottom: 15px;
+			font-weight: 300;
+			font-size: 16px;
 		}
 	}
 
 	p {
-		color: #262121;
+		color: $default-text-color;
+		font-weight: 300;
+		font-size: 16px;
 
 		a {
 			color: #f42533;
@@ -410,7 +460,7 @@ S l i d e
 		width: 100%;
 		position: absolute;
 		left: 0;
-		bottom: -25px;
+		bottom: -19px;
 	}
 
 }
@@ -421,17 +471,106 @@ S l i d e
 	h4 {
 		font-size: 24px;
 		color: white;
+		text-transform: uppercase;
+		font-weight: 400;
 	}
 }
 
+.ambiente,
+.eficiencia,
+.contact-cover,
+.seguridad {
+	background: url(../images/cctv-b.jpg) no-repeat center center;
+	background-size: cover;
+
+	h2 {
+		font-weight: bold;
+		color: white;
+		text-transform: uppercase;
+		font-size: 48px;
+	}
+
+	p {
+		color: white;
+		font-size: 18px;
+	}
+
+	img {
+		width: 50px;
+		height: auto;
+	}
+}
+
+.three-ambiente,
+.two-eficiencia,
 .one-seguridad {
 	padding-top: 90px;
+	background: #0c0405;
+
+	p {
+		color: white;
+		font-size: 18px;
+		font-weight: 300;
+	}
+
+	ul {
+		color: white;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		margin-bottom: 60px;
+
+		li {
+			font-size: 	24px;
+			color: white;
+		}
+	}
+}
+
+.two-eficiencia {
+	background: #0b3564;
+	position: relative;
+
+	.moon-bg {
+		top: 0;
+		left: 0;
+		width: 100%;
+		position: absolute;
+		background: url(../images/moon-b.jpg) no-repeat center center;
+		background-size: cover;
+		height: 600px;
+	}
+
+	ul {
+		margin-bottom: 120px;
+	}
+
+}
+
+.three-ambiente {
+	background: #1377d6;
+}
+
+.eficiencia {
+	background: url(../images/eficiencia-b.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.ambiente {
+	background: url(../images/env-b.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.contact-cover {
+	background: url("../images/office-b.jpg");
+	background-size: cover;
+
 }
 
 .stats-seguridad-description {
 	.col-sm-6 {
-		height: 420px;
-		background: tomato;
+		height: 480px;
+		background: white;
 
 		.stats-quote {
 			height: 100%;
@@ -441,11 +580,19 @@ S l i d e
 		.stats-list {
 			height: 100%;
 			padding: 30px 90px 15px 90px;
+			background: #fbfbfb;
+
+			p {
+				font-weight: 300;
+				font-size: 18px;
+				margin-bottom: 30px;
+			}
 
 			ul {
 				list-style: none;
 
 				li {
+					font-size: 18px;
 					margin-bottom: 15px;
 					img {
 						margin-right: 15px;
@@ -455,9 +602,20 @@ S l i d e
 		}
 
 		&:first-child {
-			background: red;
+			background: $primary-green;
+
+			h3 {
+				font-size: 42px;
+				color: white;
+				font-weight: 300;
+			}
 		}
 	}
+}
+
+.stats-number-container {
+	background-color: white;
+	padding: 30px 0;
 }
 
 .stats-number {
@@ -465,8 +623,31 @@ S l i d e
 
 	h4 {
 		font-size: 64px;
+		color: $primary-green;
 	}
 
+	p {
+		font-weight: 18px;
+	}
+
+}
+
+.soluciones {
+	padding-top: 90px;
+	background: #222120;
+
+	h2 {
+		text-transform: uppercase;
+		margin: 0;
+		margin-bottom: 90px;
+		color: #dddddd;
+		font-weight: 300;
+
+		span {
+			color: #dddddd;
+			font-weight: bold;
+		}
+	}
 }
 
 .solution-item {
@@ -478,7 +659,7 @@ S l i d e
 		position: absolute;
 		top: 0;
 		right: 0;
-		padding: 60px 90px 30px 90px;
+		padding: 90px 90px 30px 90px;
 		background: rgba(0, 0, 0, 0.3);
 
 		h4 {
@@ -486,12 +667,19 @@ S l i d e
 			font-weight: bold;
 			font-size: 28px;
 			margin: 0;
+			font-family: 'PT Sans Narrow', sans-serif;
+			text-transform: uppercase;
+			color: white;
+			margin-bottom: 15px;
 			span {
+				color: white;
 				font-weight: normal;
 			}
 		}
 
-		a {
+		a:not(.button) {
+			font-family: 'PT Sans Narrow', sans-serif;
+			text-transform: uppercase;
 			color: white;
 			text-decoration: none;
 		}
@@ -507,36 +695,57 @@ S l i d e
 
 .book {
 	padding: 90px 0;
+	background-color: #222120;
+	background: url(../images/book-b.jpg) no-repeat center center;
+	background-size: cover;
+
 
 	h4 {
 		font-size: 34px;
 		margin-bottom: 60px;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: white;
+
 
 		span {
 			font-weight: bold;
+			color: white;
+
 		}
 	}
 
 	p {
 		margin-bottom: 30px;
+		color: white;
+
 	}
 
 	span {
+		color: white;
 		font-weight: bold;
+		text-transform: uppercase;
 	}
+
 }
 
 .everything {
-	padding: 90px 0;
-	background: #ddd;
+	padding: 120px 0;
+	background: #fff;
+	background: url(../images/movilidad-b.png) no-repeat left center;
+	background-size: cover;
 
 	.everything-item {
 
 		h4 {
 			margin: 0;
 			font-size: 28px;
+			color: $primary-green;
+			text-transform: uppercase;
 			span {
 				font-weight: bold;
+				color: $primary-green;
+				text-transform: uppercase;
 			}
 		}
 
@@ -551,12 +760,48 @@ S l i d e
 	}
 }
 
+.line.movilidad-pink,
+.movilidad-pink {
+	background: $movilidad-pink;
+}
+
+.line.movilidad-green,
+.movilidad-green {
+	background: $movilidad-green;
+}
+
+.line.movilidad-blue,
+.movilidad-blue {
+	background: $movilidad-blue;
+}
+
+.movilidad-pink-text {
+	color: $movilidad-pink !important;
+}
+
+.movilidad-green-text {
+	color: $movilidad-green !important;
+}
+
+.movilidad-blue-text {
+	color: $movilidad-blue !important;
+}
+
+.white-text {
+	color: white;
+}
+
 .see-more {
 
 	.col-sm-6 {
 		//display: table;
-		// position: relative;
+		position: relative;
 		height: 225px;
+		background-size: cover;
+		// background: red;
+		&:hover {
+			background: url("../images/crowd-b.jpg") no-repeat center center;
+		}
 	}
 
 	.see-img {
@@ -570,27 +815,30 @@ S l i d e
 
 	.see-description {
 		position: relative;
-		background: url("http://www.placehold.it/600x200") no-repeat center center;
 		background-size: cover;
-		// z-index: 2;
-		//padding: 60px;
-		// background: rgba(0, 0, 0, 0.3);
 		text-align: center;
 		margin: 0;
 		display: table;
 		vertical-align: middle;
 		height: 100%;
 		width: 100%;
+		border-spacing: 0;
+
 
 		.see-content {
 			display: table-cell;
 			width: 100%;
 			vertical-align: middle;
+			border-spacing: 0;
+
 		}
 
 		h4 {
+			color: white;
 			text-transform: uppercase;
+			margin-bottom: 30px;
 		}
+
 	}
 
 }
@@ -600,11 +848,16 @@ s i n g l e
 ********/
 
 .single-cover {
-	background: url(http://www.placehold.it/1000x600) no-repeat center center;
+	background: url(../images/lapuebla-b.jpg) no-repeat center center;
 	background-size: cover;
+	height: 70vh;
 
 	.container {
 		height: 100%;
+	}
+
+	h2 {
+		text-transform: uppercase;
 	}
 
 	.single-cover-container {
@@ -635,6 +888,7 @@ s i n g l e
 		span {
 			text-transform: uppercase;
 			font-weight: bold;
+			color: $secondary-text-color;
 		}
 
 		img {
@@ -651,6 +905,8 @@ s i n g l e
 	h3 {
 		font-weight: normal;
 		margin-bottom: 60px;
+		font-weight: 300;
+
 
 		span {
 			font-weight: bold;
@@ -660,15 +916,35 @@ s i n g l e
 	.related-item {
 		margin-bottom: 30px;
 
+		&:hover {
+			.button {
+				display: inline-block !important;
+			}
+		}
+
 		.solution-description {
+
 			h4 {
 				font-weight: normal;
 				font-size: 24px;
 				margin-bottom: 30px;
 			}
 
-			a {
+			a.single-extract {
+				text-transform: none;
 				font-weight: bold;
+				font-size: 16px;
+				font-weight: 400;
+			}
+
+			.single-see-more {
+				position: relative;
+				a.button {
+					display: none;
+					position: absolute;
+					top: calc(50%);
+					right: 15px;
+				}
 			}
 		}
 
@@ -683,8 +959,8 @@ c o n t a c t
 *******/
 
 .contact-cover {
-	background: url(http://www.placehold.it/1000x600) no-repeat center center;
-	background-size: cover;
+	// background: url(../images/cover-b.png) no-repeat center center;
+	// background-size: cover;
 
 	.container {
 		height: 100%;
@@ -706,7 +982,16 @@ c o n t a c t
 	padding: 60px 0;
 
 	.address-text {
-		padding-top: 60px;
+		padding-top: 90px;
+
+		.addres-item {
+			font-size: 24px;
+			text-transform: uppercase;
+		}
+
+		p {
+			font-size: 16px;
+		}
 	}
 }
 
@@ -714,40 +999,9 @@ c o n t a c t
 	background: #333;
 	padding: 60px 0;
 
-	form {
-		margin-top: 60px;
-	}
-
 	label {
 		color: white;
 		margin-bottom: 15px;
-	}
-
-	input[type="text"],
-	input[type="email"],
-	textarea {
-		background: none;
-		border-radius: 0;
-		padding: 10px 30px;
-		color: white;
-
-		&::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-			color:    #7f7e7e;
-		}
-
-		&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-			color:    #7f7e7e;
-			opacity:  1;
-		}
-
-		&::-moz-placeholder { /* Mozilla Firefox 19+ */
-			color:    #7f7e7e;
-			opacity:  1;
-		}
-
-		&:-ms-input-placeholder { /* Internet Explorer 10-11 */
-			color:    #7f7e7e;
-		}
 	}
 
 	.form-control {
@@ -756,13 +1010,18 @@ c o n t a c t
 
 	textarea.form-control {
 		height: inherit;
+		background: none;
+		border-radius: 0;
+		color: white;
 	}
 
 	h3 {
-		font-weight: normal;
+		font-weight: 300;
 		color: #fff;
 		font-size: 36px;
+		text-transform: uppercase;
 		span {
+			color: white;
 			font-weight: bold;
 		}
 	}
@@ -772,12 +1031,17 @@ c o n t a c t
 		h5 {
 			color: white;
 			font-size: 24px;
+			text-transform: uppercase;
 		}
 
 		ul {
 			list-style: none;
+			margin: 0;
+			padding: 0;
+			margin-top: 45px;
 
 			li {
+				font-family: 'PT Sans Narrow', sans-serif;
 				color: white;
 				margin-bottom: 15px;
 
@@ -794,9 +1058,32 @@ c o r e
 c l a s s e s
 *******/
 
+.margin-90 {
+	margin-top: 90px;
+}
+
+.movilidad-3-title {
+	margin: 0;
+	margin-bottom: 60px;
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 36px;
+	color: white;
+
+	.movilidad-3-number {
+		font-weight: bold;
+		//color: $primary-green;
+	}
+
+	span {
+		font-weight: bolder;
+		color: white;
+	}
+}
+
 .line {
-	width: 50px;
-	height: 5px;
+	width: 40px;
+	height: 4px;
 	background: white;
 	display: inline-block;
 
@@ -807,11 +1094,17 @@ c l a s s e s
 	&.full {
 		width: 100%;
 	}
+
+	&.movilidad-line {
+		width: 100px;
+
+	}
 }
 
 .google-maps {
 	color: #e12d35;
 	text-transform: uppercase;
+	font-size: 16px;
 
 	&:hover {
 		color: #e12d35;
@@ -853,16 +1146,23 @@ c l a s s e s
 #news {
 	background: #333;
 	color: white;
+
+	.container {
+		padding-top: 90px;
+		height: 100%;
+	}
 }
 
 .news-title {
 	margin-bottom: 60px;
+	height: 72px;
 
 	.col-sm-3 {
 		vertical-align: top;
+		padding-left: 0;
 	}
 
-	.col-sm-7 {
+	.col-sm-6 {
 		vertical-align: top;
 
 		h2 {
@@ -870,77 +1170,185 @@ c l a s s e s
 			margin: 0;
 			padding: 0;
 			font-weight: normal;
+			color: white;
 
 			span {
+				color: white;
 				font-weight: bold;
 			}
 		}
 
 		h4 {
 			text-transform: uppercase;
+			font-weight: 300;
+			color: white;
 
 			span {
-				color: #e22d35;
+				color: $primary-red;
 			}
 		}
 	}
 }
 
-.news-item{
+.news-container {
+	height: calc(100% - 72px - 60px);
+
+	.col-sm-7 {
+		height: 100%;
+
+		.row {
+			height: 50%;
+		}
+	}
+}
+
+.news-item {
 	background: white;
 	padding: 30px 45px;
 	color: #333;
 	text-align: left;
-	background: url(http://www.placehold.it/600x300) no-repeat center center;
+	background: url(../images/news-b.jpg) no-repeat center center;
 	background-size: cover;
+
+
+	div {
+		padding: 60px 30px;
+		height: 100%;
+
+		.button.button-primary {
+			display: none;
+		}
+
+	}
+
+	&:hover {
+		.button.button-primary {
+			display: inline-block;
+		}
+	}
 
 	h5 {
 		color: white;
-		font-size: 24px;
+		font-size: 18px;
+		text-transform: uppercase;
 	}
 
 	p {
 		color: white;
-		font-size: 36px;
+		font-size: 24px;
 	}
 
 	&.medium-item{
-		height: 400px;
-		background: url(http://www.placehold.it/600x600) no-repeat center center;
+		height: 100%;
+		padding-top: 90px;
+		background: url(../images/medium-b.png) no-repeat center center;
+		background-size: cover;
 
+		p {
+			text-transform: uppercase;
+			font-size: 24px;
+			margin-bottom: 30px;
+		}
 	}
 
 	&.small-item {
-		height: 200px;
+		height: 100%;
+
+		div {
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
 
 		p {
-			font-size: 18px;
+			font-size: 14px;
 		}
 
 		&.no-bg {
 			background: tomato;
 		}
+
+		&.no-bg-white {
+			background: white;
+
+			h5, p {
+				color: $default-text-color;
+			}
+		}
 	}
 
 }
 
+.newsletter {
+	background: url("../images/news-b.jpg") no-repeat center center;
+	background-size: cover;
+	height: 320px;
+
+	.container {
+		height: 100%;
+	}
+
+	.col-sm-6 {
+		padding: 30px 0;
+
+		h3 {
+			text-transform: uppercase;
+		}
+
+		.newsletter-form {
+			position: relative;
+			width: 400px;
+			margin: 0 auto;
+
+			.form-control {
+				width: 400px;
+				margin: 0 auto;
+				border-radius: 0;
+				color: $default-text-color;
+			}
+
+			.icon-form {
+				content: "";
+				position: absolute;
+				top: 9px;
+				right: 12px;
+				width: 21px;
+				height: auto;
+			}
+		}
+	}
+}
+
 .scroll-item-small{
-	margin-top: 60px;
+
+	img {
+		width: 20px;
+		height: auto;
+	}
 }
 
 .button {
 	text-transform: uppercase;
 
 	&.button-primary{
-		border-radius: 100px;
-		background: #c3d102;
-		width: 64px;
-		padding: 10px 20px;
+		// border-radius: 100px;
+		background: $primary-green;
+		// width: 64px;
+		// padding: 10px 20px;
 		color: white;
+		// font-size: 36px;
+		// text-align: center;
+		width: 50px;
+		height: 50px;
+		text-align: center;
+		padding: 6px 0;
 		font-size: 36px;
+		line-height: 1.0;
+		border-radius: 50px;
+		display: inline-block;
+		font-weight: 300;
 
-		&.red {
-
+		&.button-red {
+			background: $primary-red;
 		}
 	}
 
@@ -948,8 +1356,28 @@ c l a s s e s
 		color: white;
 		margin-top: 10px;
 		border: 1px solid white;
-		padding: 15px 10px;
+		padding: 15px 15px;
 		display: inline-block;
+		font-family: 'Lato', sans-serif;
+
+		span {
+
+		}
+
+		&.button-movilidad-blue:hover {
+			background: $movilidad-blue;
+			border: 1px solid $movilidad-blue;
+		}
+
+		&.button-movilidad-pink:hover {
+			background: $movilidad-pink;
+			border: 1px solid $movilidad-pink;
+		}
+
+		&.button-movilidad-green:hover {
+			background: $movilidad-green;
+			border: 1px solid $movilidad-green;
+		}
 
 		&::after {
 			background: url(../images/arrow-icon.png) no-repeat;
