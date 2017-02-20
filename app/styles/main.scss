@@ -290,6 +290,7 @@ f o o t e r
 
 footer {
 	padding: 30px 0;
+	background: white;
 	/* background: #f0f0f0;*/
 
 	.legal {
@@ -382,10 +383,14 @@ S l i d e
 	-webkit-transition-duration :1s;
 }
 
+.no-scroll{
+	overflow: hidden;
+}
+
 
 .slide {
 
-	position: fixed;
+
 	top: 0;
 	left: 0;
 	background: rgba(190, 100, 100, 0.6);
@@ -396,8 +401,19 @@ S l i d e
 	-webkit-transform: translateY(100%);
 	-ms-transform: translateY(100%);
 	transform: translateY(100%);
+	position: fixed;
+
+	&.not-fixed{
+		//overflow: auto;
+		position: relative;
+			-webkit-transform: translateY(0%) !important;
+			-ms-transform: translateY(0%) !important;
+			transform: translateY(0%) !important;
+
+	}
 
 	&.fixed {
+		//position: fixed;
 		-webkit-transform: translateY(0) !important;
 		-ms-transform: translateY(0) !important;
 		transform: translateY(0) !important;
@@ -1106,6 +1122,14 @@ c l a s s e s
 
 .relative-wrapper {
 	padding-top: 100vh;
+	z-index: 25;
+	position: relative;
+
+	&.fixed {
+		padding-top: 0;
+		position: fixed;
+    z-index: 5;
+	}
 }
 
 .z-10 {

@@ -23,7 +23,7 @@
   <script src="/bower_components/modernizr/modernizr.js"></script>
   <!-- endbuild -->
 </head>
-<body>
+<body class="no-scroll">
   <!--[if lt IE 10]>
   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
@@ -175,10 +175,10 @@
       <!--  About ends  -->
     </div>
 
-    <div class="relative-wrapper">
+    <div class="relative-wrapper fixed">
 
       <!--  News starts -->
-      <div id="news" class="news skrollr-deck slide">
+      <div id="news" class="news skrollr-deck slide not-fixed">
 
         <div class="container">
           <div class="row news-title">
@@ -258,32 +258,34 @@
       </section>
       <!--  newsletter ends -->
 
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <ul class="links">
+                <li>Nosotros</li>
+                <li>Movilidad 3.0</li>
+                <li>Noticias</li>
+                <li>Clientes</li>
+                <li>Contacto</li>
+              </ul>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-sm-4 legal text-right">
+              <img src="images/logo-footer-icon.png" alt="">
+              <p>Síguenos en <a href="#">Facebook</a>, <a href="#">Twitter</a>,  <a href="#">Instagram</a> y <a href="#">Youtube</a></p>
+              <p>© 2017 Autotraffic Todos los derechos reservados.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
 
     </div>
 
 
     <!--  News ends  -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
-            <ul class="links">
-              <li>Nosotros</li>
-              <li>Movilidad 3.0</li>
-              <li>Noticias</li>
-              <li>Clientes</li>
-              <li>Contacto</li>
-            </ul>
-          </div>
-          <div class="col-md-4"></div>
-          <div class="col-sm-4 legal text-right">
-            <img src="images/logo-footer-icon.png" alt="">
-            <p>Síguenos en <a href="#">Facebook</a>, <a href="#">Twitter</a>,  <a href="#">Instagram</a> y <a href="#">Youtube</a></p>
-            <p>© 2017 Autotraffic Todos los derechos reservados.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
 
   <!-- </main> -->
 
