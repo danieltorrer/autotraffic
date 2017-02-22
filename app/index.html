@@ -28,7 +28,7 @@
   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <nav class="hide menu-container">
+  <nav class="menu-container">
     <ul class="menu-list ">
       <li class="menu-item"><a href="#">Inicio</a></li>
       <li class="menu-item"><a href="#">Nosotros</a></li>
@@ -57,10 +57,10 @@
 
   <nav class="nav-home" aria-hidden="true">
     <ul>
-      <li class="active" data-href="#home"><span>Home</span></li>
-      <li data-href="#movilidad"><span>Movilidad</span></li>
-      <li data-href="#about"><span>About</span></li>
-      <li data-href="#news"><span>News</span></li>
+      <li data-slide="0" class="active" data-href="#home"><span>Home</span></li>
+      <li data-slide="1" data-href="#movilidad"><span>Movilidad</span></li>
+      <li data-slide="2" data-href="#about"><span>About</span></li>
+      <li data-slide="3" data-href="#news"><span>News</span></li>
     </ul>
   </nav>
 
@@ -82,7 +82,12 @@
           </div>
 
           <div class="scroll-item text-center">
-            <p><img class="scale-img" src="images/scroll-icon.png" alt="scroll"></p>
+            <p>
+              <img class="scale-img flecha-icon flecha-icon-4" src="images/flecha-icon.png" alt="scroll">
+              <img class="scale-img flecha-icon flecha-icon-3" src="images/flecha-icon.png" alt="scroll">
+              <img class="scale-img flecha-icon flecha-icon-2" src="images/flecha-icon.png" alt="scroll">
+              <img class="scale-img flecha-icon flecha-icon-1" src="images/flecha-icon.png" alt="scroll">
+            </p>
           </div>
 
         </div>
@@ -106,7 +111,7 @@
                   <p class="font-title">Seguridad</p>
 
                   <div class="movilidad-descripcion">
-                    <a class="button button-primary" href="#">+</a>
+                    <a class="button button-primary button-animated" href="#">+</a>
                   </div>
                 </div>
 
@@ -119,7 +124,7 @@
                   <p class="font-title">eficiencia</p>
 
                   <div class="movilidad-descripcion">
-                    <a class="button button-primary" href="#">+</a>
+                    <a class="button button-primary button-animated" href="#">+</a>
                   </div>
                 </div>
 
@@ -132,7 +137,7 @@
                   <p class="font-title">Medio ambiente</p>
 
                   <div class="movilidad-descripcion">
-                    <a class="button button-primary" href="#">+</a>
+                    <a class="button button-primary button-animated" href="#">+</a>
                   </div>
                 </div>
 
@@ -187,12 +192,11 @@
             </div>
             <div class="col-sm-6 text-left">
               <h2 class="font-text"><span>Más de</span> nosotros</h2>
-              <h4 class="font-text"><span>Noticias</span> destacadas</h4>
+              <h4 class="font-text">Noticias <span class="white-text">destacadas</span></h4>
             </div>
 
             <div class="col-sm-2">
-              <a class="button button-default" href="#">Ver todos
-              </a>
+              <a class="button button-default" href="#">Ver todos</a>
             </div>
           </div>
 
@@ -201,7 +205,7 @@
               <div>
                 <h5 class="font-title">Noticias</h5>
                 <p>Lorem ipsum quasi repellat ipsam.</p>
-                <a href="#" class="button button-primary button-red">+</a>
+                <a href="#" class="button button-primary button-red button-animated">+</a>
               </div>
             </div>
 
@@ -212,7 +216,7 @@
                   <div>
                     <h5 class="font-title">Noticias</h5>
                     <p>Lorem ipsum! Consequuntur rerum, deserunt.</p>
-                    <a href="" class="button button-primary button-red">+</a>
+                    <a href="" class="button button-primary button-red button-animated">+</a>
                   </div>
                 </div>
 
@@ -220,7 +224,7 @@
                   <div>
                     <h5 class="font-title">Noticias</h5>
                     <p>Lorem ipsum, quae accusamus officia.</p>
-                    <a href="" class="button button-primary button-red">+</a>
+                    <a href="" class="button button-primary button-red button-animated">+</a>
                   </div>
                 </div>
 
@@ -228,7 +232,7 @@
                   <div>
                     <h5 class="font-title">Noticias</h5>
                     <p>Lorem ipsum Unde eligendi, molestias deserunt quia.</p>
-                    <a href="#" class="button button-primary button-red">+</a>
+                    <a href="#" class="button button-primary button-red button-animated">+</a>
                   </div>
                 </div>
 
