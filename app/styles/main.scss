@@ -1588,6 +1588,30 @@ c l a s s e s
 	}
 }
 
+.zoom-image {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+.zoom-image-1 {
+	background: url(../images/cctv-b.jpg);
+	background-size: cover;
+}
+
+.zoom-image-2 {
+	background: url(../images/cctv-b.jpg);
+	background-size: cover;
+}
+
+.zoom-image-3 {
+	background: url(../images/cctv-b.jpg);
+	background-size: cover;
+}
+
 .scroll-item-small{
 
 	img {
