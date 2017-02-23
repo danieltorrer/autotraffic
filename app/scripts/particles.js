@@ -79,6 +79,19 @@ var Particle = function(xPos, yPos){
 function setup(){
     particles = [];
     resizeReset();
+
+
+      // Create gradient
+    grd = drawArea.createLinearGradient(150.000, 0.000, 150.000, 300.000);
+
+      // Add colors
+    grd.addColorStop(0.000, 'rgba(225, 34, 47, 1.000)');
+    grd.addColorStop(1.000, 'rgba(170, 26, 36, 1.000)');
+
+      // Fill with gradient
+    drawArea.fillStyle = grd;
+    drawArea.fillRect(0, 0, window.innerWidth, window.innerHeight);
+
     for (var i = 0; i < opts.particleAmount; i++){
         particles.push( new Particle() );
     }
@@ -110,6 +123,8 @@ var opts = {
 
 var canvasBody = document.getElementById('nodes'),
       drawArea = canvasBody.getContext('2d');
+
+var grd;
 
 
 var delay = 200, tid, w, h, particles,

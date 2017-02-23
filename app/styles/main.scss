@@ -103,7 +103,7 @@ nav.nav-home {
 	top: 50%;
 	margin-top: -38px;
 	right: 20px;
-	z-index: 100;
+	z-index: 29;
 
 	ul {
 		list-style: none;
@@ -168,8 +168,8 @@ nav.menu-container {
 		margin-top: 60px;
 		width: 100%;
 
-		.menu-item{
-			text-transform: uppercase;
+		.menu-item {
+			// text-transform: uppercase;
 			position: relative;
 			display: block;
 			width: 100%;
@@ -177,7 +177,42 @@ nav.menu-container {
 			font-size: 36px;
 			padding: 20px 0;
 
+			.item-sub-menu {
+				span {
+					margin-left: 10px;
+					font-size: 18px;
+					color: #363534;
+					vertical-align: middle;
+					-webkit-transition: color .3s linear;
+					-moz-transition: color .3s linear;
+					-ms-transition: color .3s linear;
+					transition: color .3s linear;
+				}
+			}
+
+			.menu-item-list {
+				padding-left: 60px;
+				//position: relative;
+				//top: 0;
+				//left: 0;
+				//height: auto;
+				//width: 100%;
+				li {
+					padding: 20px;
+				}
+			}
+
 			&:hover {
+				&>a {
+					color: #fff;
+					text-decoration: none;
+
+					span {
+						color: #fff;
+					}
+				}
+			}
+			&:hover:not(:last-child) {
 				background: #232322;
 			}
 
@@ -185,19 +220,41 @@ nav.menu-container {
 				/*text-align: center;*/
 				left: 50%;
 				margin-left: -297px;
+				margin-top: 30px;
 
-				img{
+				svg {
 					margin: 0 30px;
+					height: 25px;
+					width: auto;
+
+					path {
+						fill: white;
+					}
+
+					&:hover path {
+						fill: #a4151d;
+					}
 				}
 			}
 
-			a{
+			a {
 				display: inline-block;
 				position: relative;
 				left: 50%;
+				font-weight: 700;
 				margin-left: -297px;
 				white-space: nowrap;
-				color: #fff;
+				color: #363534;
+				-webkit-transition: color .3s linear;
+		    -moz-transition: color .3s linear;
+		    -ms-transition: color .3s linear;
+		    transition: color .3s linear;
+
+				&:focus,
+				&:hover,
+				&:active {
+					text-decoration: none;
+				}
 			}
 		}
 	}
@@ -207,8 +264,13 @@ nav.menu-container {
 h e a d e r
 ********/
 
-header {
+.menu-opened header {
+	// svg path, svg path.a {
+	// 	fill: original;
+	// }
+}
 
+header {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -227,9 +289,15 @@ header {
 		margin: 0;
 	}
 
-	img {
-		width: 180px;
-		height: auto;
+	svg {
+			width: 180px;
+			height: auto;
+
+			&.logo-vector {
+			path, path.a{
+				fill: white;
+			}
+		}
 	}
 
 }
@@ -465,7 +533,7 @@ S l i d e
 
 
 .home {
-	background: tomato;
+	background: transparent;
 
 	#nodes {
 		height: 100%;
@@ -475,7 +543,14 @@ S l i d e
 		top: 0;
 		left: 0;
 		z-index: -1;
-		background: tomato;
+		background: rgba(225,34,47,1);
+		background: -moz-linear-gradient(top, rgba(225,34,47,1) 0%, rgba(170,26,36,1) 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(225,34,47,1)), color-stop(100%, rgba(170,26,36,1)));
+		background: -webkit-linear-gradient(top, rgba(225,34,47,1) 0%, rgba(170,26,36,1) 100%);
+		background: -o-linear-gradient(top, rgba(225,34,47,1) 0%, rgba(170,26,36,1) 100%);
+		background: -ms-linear-gradient(top, rgba(225,34,47,1) 0%, rgba(170,26,36,1) 100%);
+		background: linear-gradient(to bottom, rgba(225,34,47,1) 0%, rgba(170,26,36,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1222f', endColorstr='#aa1a24', GradientType=0 );
 	}
 
 	.logo-icon {
@@ -489,9 +564,16 @@ S l i d e
 		font-weight: 700;
 		font-size: 48px;
 		span {
-
+			color: white;
 			font-weight: normal;
 		}
+	}
+}
+
+section#movilidad {
+	background: white;
+	.valign-item > .container {
+		z-index: 5;
 	}
 }
 
@@ -1477,7 +1559,7 @@ c l a s s e s
 
 
 	div {
-		padding: 60px 30px;
+		padding: 60px 30px 0 30px;
 		height: 100%;
 
 		.button.button-primary {
@@ -1486,9 +1568,21 @@ c l a s s e s
 
 	}
 
+	// .button-container {
+	// 	// width: 100%;
+	// 	// height: 100%;
+	// 	position: absolute;
+	// 	padding: 0;
+	// 	margin: 0;
+	// 	bottom: 10%;
+	// 	left: 0;
+	// }
+
 	&:hover {
 		.button.button-animated {
 			//display: inline-block;
+			position: absolute;
+			bottom: 9%;
 			opacity: 1;
 	    -webkit-transform: scale(1);
 	    -moz-transform: scale(1);
@@ -1509,6 +1603,7 @@ c l a s s e s
 	}
 
 	&.medium-item{
+		position: relative;
 		height: 100%;
 		padding-top: 90px;
 		background: url(../images/medium-b.png) no-repeat center center;
@@ -1518,15 +1613,45 @@ c l a s s e s
 			text-transform: uppercase;
 			font-size: 24px;
 			margin-bottom: 30px;
+			margin: 0;
+			padding: 0;
 		}
+
+		&:hover {
+			.button.button-animated {
+				//display: inline-block;
+				margin-left: 30px;
+				position: absolute;
+				bottom: 9%;
+				opacity: 1;
+				-webkit-transform: scale(1);
+				-moz-transform: scale(1);
+				-ms-transform: scale(1);
+				transform: scale(1);
+			}
+		}
+
 	}
 
 	&.small-item {
 		height: 100%;
 
+		&:hover {
+			.button.button-animated {
+				//display: inline-block;
+				position: absolute;
+				bottom: 10%;
+				opacity: 1;
+				-webkit-transform: scale(1);
+				-moz-transform: scale(1);
+				-ms-transform: scale(1);
+				transform: scale(1);
+			}
+		}
+
 		div {
-			padding-top: 15px;
-			padding-bottom: 15px;
+			padding-top: 5px;
+			padding-bottom: 10px;
 		}
 
 		p {
@@ -1534,7 +1659,7 @@ c l a s s e s
 		}
 
 		&.no-bg {
-			background: tomato;
+			background: $primary-red;
 		}
 
 		&.no-bg-white {
@@ -1594,21 +1719,48 @@ c l a s s e s
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 0;
+
+	&.zoom-animate {
+		-webkit-animation: growimageHome 15s 0s linear infinite alternate;
+		-ms-animation: growimageHome 15s 0s linear infinite alternate;
+		animation: growimageHome 15s 0s linear infinite alternate;
+	}
 }
 
-.zoom-image-1 {
-	background: url(../images/cctv-b.jpg);
-	background-size: cover;
+
+@-webkit-keyframes growimageHome {
+    0% {
+        -webkit-transform: translate3d(0,0,0) scale(1)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0,0,0) scale(1.1)
+    }
 }
+
+@keyframes growimageHome {
+    0% {
+        transform: translate3d(0,0,0) scale(1)
+    }
+
+    100% {
+        transform: translate3d(0,0,0) scale(1.1)
+    }
+}
+
 
 .zoom-image-2 {
 	background: url(../images/cctv-b.jpg);
 	background-size: cover;
 }
 
+.zoom-image-1 {
+	background: url(../images/bike-b.jpg);
+	background-size: cover;
+}
+
 .zoom-image-3 {
-	background: url(../images/cctv-b.jpg);
+	background: url(../images/env-b.jpg);
 	background-size: cover;
 }
 
@@ -1643,6 +1795,11 @@ c l a s s e s
 
 		&.button-red {
 			background: $primary-red;
+		}
+
+		&.button-white {
+			background: white;
+			color: $primary-red;
 		}
 
 		&.button-animated {
