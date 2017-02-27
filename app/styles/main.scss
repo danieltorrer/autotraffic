@@ -2,7 +2,7 @@
 CSS
 
 * @Version:    1.0.0 - 2017
-* @author:     Daniel Torres (alexandre gomes)
+* @author:     Daniel Torres
 * @email:      daniel.torrer@gmail.com
 * @website:    gitlab.com/danieltorrer
 * @preserve
@@ -677,6 +677,7 @@ section#movilidad {
 	}
 }
 
+.clientes-cover,
 .nosotros-cover {
 	background: url(../images/red-b.jpg) no-repeat center center;
 	background-size: cover;
@@ -711,6 +712,8 @@ section#movilidad {
 
 	.row {
 		background: white;
+		margin-left: 0;
+		margin-right: 0;
 		&:hover {
 
 			background: $primary-red;
@@ -737,6 +740,7 @@ section#movilidad {
 			.vacante-info {
 				img {
 					display: inline-block;
+					margin-right: 0px;
 					&:first-child {
 						display: none;
 					}
@@ -1309,6 +1313,7 @@ c o n t a c t
 	}
 }
 
+.vacantes,
 .contact-form {
 	background: #333;
 	padding: 60px 0;
@@ -1642,7 +1647,7 @@ c l a s s e s
 
 	.col-sm-3 {
 		vertical-align: top;
-		padding-left: 0;
+		// padding-left: 0;
 	}
 
 	.col-sm-6 {
@@ -1958,6 +1963,10 @@ c l a s s e s
 		// transform: translateZ(0 scale(1.5, 1.5);
 
 		}
+
+		&:focus {
+			text-decoration: none;
+		}
 	}
 
 	&.button-default{
@@ -2071,6 +2080,13 @@ c l a s s e s
 }
 
 .modal-body {
+	h3 {
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	padding-bottom: 75px;
+
 	.vacante-info {
 		img {
 			display: inline-block;
@@ -2082,4 +2098,75 @@ c l a s s e s
 
 		margin-bottom: 60px;
 	}
+
+}
+
+.clientes-cover{
+	background: white;
+	h3 {
+		color: $primary-red;
+		font-size: 48px;
+	}
+
+	p {
+		font-size: 18px;
+		color: $default-text-color;
+	}
+}
+
+.carousel {
+	margin-top: 30px;
+
+	.carousel-item {
+		text-align: center;
+
+		p {
+			width: 50%;
+			margin: 0 auto;
+			margin-top: 45px;
+			font-size: 18px;
+			font-weight: 300;
+			display: block;
+		}
+
+		&:hover {
+			.button {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+
+	}
+
+
+	.carrousel-content {
+		width: 100%;
+		height: 150px !important;
+		display: table;
+
+		div {
+			vertical-align: middle;
+			display: table-cell;
+			text-align: center;
+			position: relative;
+
+			img {
+				margin: 0 auto;
+			}
+
+			.button {
+				position: absolute;
+				left: calc(50% - 13px);
+				top: calc(50% - 13px);
+			}
+		}
+
+
+	}
+
+	.slick-dots {
+		padding-top: 30px;
+		bottom: -50px;
+	}
+
 }

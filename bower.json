@@ -4,9 +4,8 @@
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.1",
-    "skrollr-decks": "^1.0.5",
-    "animate.css": "^3.5.2",
-    "velocity": "^1.4.3"
+    "velocity": "^1.4.3",
+    "slick-carousel": "^1.6.0"
   },
   "overrides": {
     "bootstrap-sass": {
