@@ -5,10 +5,11 @@ var menuOpened = false;
 
 
 $(document).ready(function() {
+  $('nav.menu-container').velocity({'translateY': '-130%'},{duration: 0});
 
   $('.menu-btn a').click( function(){
     //$(this).toggleClass('menu-btn-back');
-    $('body').toggleClass('menu-opened');
+    $('body').toggleClass('menu-opened')
     if(menuOpened){
       $('nav.menu-container').velocity({
         'translateY': '-130%'
@@ -16,6 +17,7 @@ $(document).ready(function() {
         duration: 0,
         complete: function(){
           menuOpened = !menuOpened;
+          $('header svg.logo-colors').toggleClass('logo-vector');
         }
       });
     }
@@ -27,10 +29,10 @@ $(document).ready(function() {
         easing: 'easeInSine',
         complete: function(){
           menuOpened = !menuOpened;
+          $('header svg.logo-colors').toggleClass('logo-vector');
         }
       });
     }
-    $('header svg').toggleClass('logo-vector');
 
 
 

@@ -27,7 +27,6 @@ $(document).ready(function(){
 	$('.scroll-body .slide[data-slide="'+ (currentSlide+1) +'"]')
 	.velocity({ translateY: '100%'}, {duration: 0});
 
-	$('nav.menu-container').velocity({'translateY': '-130%'},{duration: 0});
 
 	$(document).on('mousewheel DOMMouseScroll', function(e) {
 
@@ -50,7 +49,7 @@ $(document).ready(function(){
 			} else {
 
 				//console.log('moving DOWN the page');
-				
+
 				if(currentSlide <  maxSlide){
 
 					if(currentSlide == maxSlide-1){
