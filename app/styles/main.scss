@@ -284,6 +284,15 @@ header {
 	transition: transform .2s ease-out, -webkit-transform .2s ease-out;
 	padding: 15px 30px;
 
+	&.alternate-header {
+		background: $primary-red;
+		height: 65px;
+
+		path, path.a{
+			fill: white;
+		}
+	}
+
 	h1 {
 		display: inline-block;
 		margin: 0;
@@ -740,7 +749,7 @@ section#movilidad {
 			.vacante-info {
 				img {
 					display: inline-block;
-					margin-right: 0px;
+					margin-right: 5px;
 					&:first-child {
 						display: none;
 					}
@@ -1117,8 +1126,14 @@ section#movilidad {
 		height: 225px;
 		background-size: cover;
 		/* background: red;*/
-		&:hover {
-			background: url("../images/crowd-b.jpg") no-repeat center center;
+		&.bg-eficiencia:hover {
+			background: url("../images/movilidad-mini-b.jpg") no-repeat center center;
+		}
+		&.bg-seguridad:hover {
+			background: url("../images/seguridad-mini-b.jpg") no-repeat center center;
+		}
+		&.bg-medio:hover {
+			background: url("../images/medio-mini-b.jpg") no-repeat center center;
 		}
 	}
 
@@ -1750,7 +1765,7 @@ c l a s s e s
 		position: relative;
 		height: 100%;
 		padding-top: 90px;
-		background: url(../images/medium-b.png) no-repeat center center;
+		background: url(../images/bike-3-b.jpg) no-repeat center center;
 		background-size: cover;
 
 		p {
@@ -1980,9 +1995,19 @@ c l a s s e s
 		-webkit-transition: all 0.3s;
 		-moz-transition: all 0.3s;
 
-		&:hover {
+		&.negative {
+			&:hover,
+			&:focus {
+				background: white;
+			}
+		}
+
+		&:hover,
+		&:focus {
 			color: $default-text-color;
 			background: white;
+
+
 
 			&::after {
 				background: url(../images/arrow-icon-black.png) no-repeat;
@@ -1990,23 +2015,32 @@ c l a s s e s
 
 		}
 
-		span {
-
-		}
 
 		&.button-movilidad-blue:hover {
 			background: $movilidad-blue;
 			border: 1px solid $movilidad-blue;
+			color: white;
+			&::after {
+				background: url(../images/arrow-icon.png) no-repeat;
+			}
 		}
 
 		&.button-movilidad-pink:hover {
 			background: $movilidad-pink;
 			border: 1px solid $movilidad-pink;
+			color: white;
+			&::after {
+				background: url(../images/arrow-icon.png) no-repeat;
+			}
 		}
 
 		&.button-movilidad-green:hover {
 			background: $movilidad-green;
 			border: 1px solid $movilidad-green;
+			color: white;
+			&::after {
+				background: url(../images/arrow-icon.png) no-repeat;
+			}
 		}
 
 		&::after {
