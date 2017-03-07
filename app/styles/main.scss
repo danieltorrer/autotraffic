@@ -14,7 +14,7 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 /* endbower*/
 
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700');
 
 
@@ -596,7 +596,7 @@ section#movilidad {
 		h2 {
 			color: white;
 			text-transform: uppercase;
-			font-weight: bold;
+			font-weight: 900;
 		}
 
 		p {
@@ -664,12 +664,13 @@ section#movilidad {
 .eficiencia,
 .contact-cover,
 .trabaja-cover,
+.nosotros,
 .seguridad {
 	background: url(../images/cctv-b.jpg) no-repeat center center;
 	background-size: cover;
 
 	h2 {
-		font-weight: bold;
+		font-weight: 900;
 		color: white;
 		text-transform: uppercase;
 		font-size: 48px;
@@ -693,7 +694,7 @@ section#movilidad {
 
 	h3 {
 		text-transform: uppercase;
-		font-weight: bold;
+		font-weight: 900;
 		font-size: 36px;
 		margin-bottom: 30px;
 	}
@@ -714,6 +715,111 @@ section#movilidad {
 		}
 	}
 }
+/*** nosotros ***/
+.nosotros {
+	background: url(../images/nosotros-b.jpg);
+
+	img {
+		width: 120px;
+		height: auto;
+	}
+}
+
+.ideologia {
+
+	.bulb-container {
+		margin-top: 60px;
+		margin-bottom: 15px;
+		img {
+			width: 40px;
+			height: auto;
+		}
+	}
+	.line {
+		background: $primary-red;
+	}
+	.news-title .col-sm-6 h2,
+	.news-title .col-sm-6 h2 span {
+		color: $primary-red;
+	}
+
+}
+
+.experiencia {
+	margin-top: 60px;
+	margin-bottom: 60px;
+
+	h3 {
+		text-transform: uppercase;
+		font-weight: 900;
+	}
+}
+
+.convenio-item {
+	height: 430px;
+	padding: 15px 30px;
+	font-weight: 300;
+
+	h3 {
+		color: white;
+		font-size: 48px;
+	}
+	p {
+		font-size: 18px;
+		font-weight: 400;
+	}
+
+	.convenio-logo {
+		margin-bottom: 30px;
+	}
+}
+
+.aqua {
+	background: #00847c;
+}
+
+.aqua-text {
+	color: #00847c;
+}
+
+.blue {
+	background: #0d3351;
+}
+
+.blue-text {
+	color: #0d3351;
+}
+
+.orange {
+	background: #e08b1c;
+}
+
+.orange-text {
+	color: #e08b1c;
+}
+
+.caminable {
+	.col-sm-3 {
+		padding: 0;
+	}
+}
+
+.piramide {
+	margin-top: 90px;
+	margin-bottom: 90px;
+	h3 {
+		margin-bottom: 90px;
+		font-size: 36px;
+		font-weight: 300;
+		text-transform: uppercase;
+		span {
+			font-weight: 900;
+		}
+	}
+
+}
+
+/***** Vacante ****/
 
 .vacante-item {
 	//height: 200px;
@@ -967,7 +1073,7 @@ section#movilidad {
 
 		span {
 			color: #dddddd;
-			font-weight: bold;
+			font-weight: 900;
 		}
 	}
 }
@@ -1036,7 +1142,7 @@ section#movilidad {
 
 
 		span {
-			font-weight: bold;
+			font-weight: 900;
 			color: white;
 
 		}
@@ -1050,7 +1156,7 @@ section#movilidad {
 
 	span {
 		color: white;
-		font-weight: bold;
+		font-weight: 900;
 		text-transform: uppercase;
 	}
 
@@ -1070,7 +1176,7 @@ section#movilidad {
 			color: $primary-green;
 			text-transform: uppercase;
 			span {
-				font-weight: bold;
+				font-weight: 900;
 				color: $primary-green;
 				text-transform: uppercase;
 			}
@@ -1220,7 +1326,7 @@ s i n g l e
 
 		span {
 			text-transform: uppercase;
-			font-weight: bold;
+			font-weight: 900;
 			color: $secondary-text-color;
 		}
 
@@ -1242,7 +1348,7 @@ s i n g l e
 
 
 		span {
-			font-weight: bold;
+			font-weight: 900;
 		}
 	}
 
@@ -1356,7 +1462,7 @@ c o n t a c t
 		text-transform: uppercase;
 		span {
 			color: white;
-			font-weight: bold;
+			font-weight: 900;
 		}
 	}
 
@@ -1439,14 +1545,14 @@ c l a s s e s
 	}
 
 	span {
-		font-weight: bolder;
+		font-weight: 900;
 		color: white;
 	}
 }
 
 .line {
 	width: 40px;
-	height: 4px;
+	height: 3px;
 	background: white;
 	display: inline-block;
 
@@ -1672,12 +1778,12 @@ c l a s s e s
 			text-transform: uppercase;
 			margin: 0;
 			padding: 0;
-			font-weight: normal;
+			font-weight: 300;
 			color: white;
 
 			span {
 				color: white;
-				font-weight: bold;
+				font-weight: 900;
 			}
 		}
 
@@ -2116,7 +2222,7 @@ c l a s s e s
 .modal-body {
 	h3 {
 		text-transform: uppercase;
-		font-weight: bold;
+		font-weight: 900;
 	}
 
 	padding-bottom: 75px;
