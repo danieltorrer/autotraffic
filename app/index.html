@@ -75,11 +75,84 @@
     </ul>
   </nav>
 
+  <!--  Modal vacate starts -->
+  <div id="news-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="images/banner.jpg" alt="">
+          <button type="button" class="close button button-red button-primary" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="row cliente-logo">
+            <div class="col-sm-4 col-sm-offset-1">
+              <div class="valign">
+                <div class="valign-item">
+                  <img src="images/cdmx-i.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="valign">
+                <div class="valign-item">
+                  <h3 class="font-text">Gobierno del Estado de Puebla</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cliente-content">
+
+              <div class="row cliente-solucion">
+                <div class="col-sm-1 col-sm-offset-1">
+                  <img src="images/shield-icon-red.png" alt="">
+                </div>
+
+                <div class="col-sm-3 col-sm-offset-1">
+                  <h4 class="font-title">Solucion</h4>
+                  <p class="font-title">Multi-infracción</p>
+                </div>
+              </div>
+
+              <div class="row cliente-periodo">
+                <div class="col-sm-1 col-sm-offset-1">
+                  <img src="images/calendar-icon-red.png" alt="">
+                </div>
+
+                <div class="col-sm-3 col-sm-offset-1">
+                  <h4 class="font-title">PERIÓDO</h4>
+                  <p class="font-title">Multi-infracción</p>
+                </div>
+              </div>
+
+              <div class="row cliente-stats">
+                <div class="col-sm-1 col-sm-offset-1">
+                  <img src="images/graph-icon-red.png" alt="">
+                </div>
+
+                <div class="col-sm-3 col-sm-offset-1">
+                  <h4 class="font-title">REDUCCIÓN DE MUERTES Y/O ACCIDENTES VIALES</h4>
+                  <p class="font-title">Multi-infracción</p>
+                </div>
+              </div>
+
+
+          </div>
+
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <!--  Modal vacante ends -->
+
+
     <div class="scroll-body fixed">
 
       <!--  Home starts -->
       <section id="home" class="z-10 home valign skrollr-deck slide fixed " data-slide="0">
-        <canvas id="nodes"></canvas>
+        <div class="tilt-backup"></div>
+        <canvas id="nodes" data-tilt></canvas>
         <div class="valign-item">
           <div class="container">
             <div class="row">
@@ -223,7 +296,7 @@
                 <h5 class="font-title">Noticias</h5>
                 <p>Lorem ipsum quasi repellat ipsam.</p>
               </div>
-              <a href="#" class="button button-primary button-red button-animated">+</a>
+              <a href="#" class="news-button button button-primary button-red button-animated">+</a>
 
             </div>
 
@@ -234,7 +307,7 @@
                   <div>
                     <h5 class="font-title">Noticias</h5>
                     <p>Lorem ipsum! Consequuntur rerum, deserunt.</p>
-                    <a href="" class="button button-primary button-red button-animated">+</a>
+                    <a href="#" class="news-button button button-primary button-red button-animated">+</a>
                   </div>
                 </div>
 
@@ -242,7 +315,7 @@
                   <div>
                     <h5 class="font-title">Noticias</h5>
                     <p>Lorem ipsum, quae accusamus officia.</p>
-                    <a href="" class="button button-primary button-red button-animated button-white">+</a>
+                    <a href="#" class="news-button button button-primary button-red button-animated button-white">+</a>
                   </div>
                 </div>
 
@@ -250,7 +323,7 @@
                   <div>
                     <h5 class="font-title">Noticias</h5>
                     <p>Lorem ipsum Unde eligendi, molestias deserunt quia.</p>
-                    <a href="#" class="button button-primary button-red button-animated">+</a>
+                    <a href="#" class="news-button button button-primary button-red button-animated">+</a>
                   </div>
                 </div>
 
@@ -259,8 +332,9 @@
           </div>
         </div>
 
+        <!--  modal news -->
       </div>
-
+      <!-- News ends -->
       <!--  newsletter starts -->
       <section class="newsletter">
         <div class="container valign">
@@ -348,14 +422,19 @@
 <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
 <!-- endbuild -->
 
-<!-- build:js scripts/common.js -->
+<!-- build:js scripts/home.js -->
 <script src="scripts/jquery.mousewheel.min.js"></script>
+<script src="scripts/vanilla-tilt.min.js"></script>
 <script src="scripts/slide.js"></script>
 <script src="scripts/particles.js"></script>
 <!-- endbuild -->
 
 <!-- build:js scripts/main.js -->
 <script src="scripts/main.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/news.js -->
+<script src="scripts/news.js"></script>
 <!-- endbuild -->
 </body>
 </html>

@@ -51,12 +51,12 @@ $(document).ready(function(){
 
 
 	$(document).on('mousewheel DOMMouseScroll', function(e) {
-		$('.nav-home li').removeClass('active');
+		// $('.nav-home li').removeClass('active');
 		if(!scrolling && !menuOpened){
 
 			if (e.deltaY > 0){
 				//console.log('moving UP the page');
-				processUp(1000, true);
+				processUp(1000, true, e);
 			} else {
 				//console.log('moving DOWN the page');
 				processDown(1000);
@@ -68,16 +68,21 @@ $(document).ready(function(){
 
 });
 
-function processUp (duration, mouse) {
-	$('.nav-home li').removeClass('active');
+function processUp (duration, mouse, e) {
 
 
 	if(currentSlide == maxSlide ){
-		if(mouse && $(window).scrollTop() == 0 || !mouse)
+		var scrollTop = $(window).scrollTop();
+		// e.preventDefault();
+
+		if(scrollTop === 0 && mouse || !mouse ){
+			$('.nav-home li').removeClass('active');
 			slideUpLast(duration);
-	}else {
+		}
+	} else {
 
 		if(currentSlide > minSlide && currentSlide != maxSlide){
+			$('.nav-home li').removeClass('active');
 			slideUp(duration);
 		}
 	}
@@ -88,9 +93,11 @@ function processDown (duration) {
 	if(currentSlide <  maxSlide){
 
 		if(currentSlide == maxSlide-1){
+			$('.nav-home li').removeClass('active');
 			slideDownLast(duration);
 
 		} else {
+			$('.nav-home li').removeClass('active');
 			slideDown(duration);
 		}
 	}
