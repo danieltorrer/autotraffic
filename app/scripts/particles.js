@@ -25,6 +25,7 @@ var checkDistance = function(x1, y1, x2, y2){
 
 var linkPoints = function(point1, hubs){
     for (var i = 0; i < hubs.length; i++) {
+      if (!hubs[i].isIcon && !point1.isIcon) {
         var distance = checkDistance(point1.x, point1.y, hubs[i].x, hubs[i].y);
         var opacity = 1 - distance / opts.linkRadius;
         if (opacity > 0) {
@@ -36,6 +37,7 @@ var linkPoints = function(point1, hubs){
             drawArea.closePath();
             drawArea.stroke();
         }
+      }
     }
 }
 
@@ -46,10 +48,19 @@ var Particle = function(xPos, yPos){
     this.directionAngle = Math.floor(Math.random() * 360);
     this.color = opts.particleColor;
     this.radius = opts.defaultRadius + Math.random() * opts. variantRadius;
+    this.isIcon = Math.random() * 100 >= 90 ? true : false;
+
+
+    if( this.isIcon ){
+      var icono = Math.floor( Math.random() * 100 % opts.icons.length );
+      this.icon = document.querySelector( opts.icons[icono] );
+    }
+
     this.vector = {
         x: Math.cos(this.directionAngle) * this.speed/2,
         y: Math.sin(this.directionAngle) * this.speed/2
     };
+
     this.update = function(){
         this.border();
         this.x += this.vector.x;
@@ -68,29 +79,21 @@ var Particle = function(xPos, yPos){
         if (this.y < 0) this.y = 0;
     };
     this.draw = function(){
+      if(this.isIcon){
+        drawArea.drawImage( this.icon, this.x, this.y);
+      } else {
         drawArea.beginPath();
         drawArea.arc(this.x, this.y, this.radius, 0, Math.PI*2);
         drawArea.closePath();
         drawArea.fillStyle = this.color;
         drawArea.fill();
+      }
     };
 };
 
 function setup(){
     particles = [];
     resizeReset();
-
-
-      // Create gradient
-    grd = drawArea.createLinearGradient(150.000, 0.000, 150.000, 300.000);
-
-      // Add colors
-    grd.addColorStop(0.000, 'rgba(225, 34, 47, 1.000)');
-    grd.addColorStop(1.000, 'rgba(170, 26, 36, 1.000)');
-
-      // Fill with gradient
-    drawArea.fillStyle = grd;
-    drawArea.fillRect(0, 0, window.innerWidth, window.innerHeight);
 
     for (var i = 0; i < opts.particleAmount; i++){
         particles.push( new Particle() );
@@ -119,6 +122,7 @@ var opts = {
   defaultRadius: 2,
   variantRadius: 1,
   linkRadius: 160,
+  icons: ['.bike-icon']
 };
 
 var canvasBody = document.getElementById('nodes'),

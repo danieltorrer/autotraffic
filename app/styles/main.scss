@@ -673,6 +673,7 @@ section#movilidad {
 .eficiencia,
 .contact-cover,
 .trabaja-cover,
+.boletin-cover,
 .nosotros,
 .seguridad {
 	background: url(../images/cctv-b.jpg) no-repeat center center;
@@ -693,6 +694,16 @@ section#movilidad {
 	img {
 		width: 50px;
 		height: auto;
+	}
+}
+
+.boletin-cover {
+	background: url(../images/boletin-b.jpg);
+	background-size: cover;
+	height: 85vh;
+
+	img {
+		width: 70px;
 	}
 }
 
@@ -1351,6 +1362,12 @@ s i n g l e
 			margin: 0 15px;
 		}
 		margin-bottom: 60px;
+	}
+}
+
+.boletin-related {
+	.solution-item .solution-description {
+    padding: 70px 90px 30px 90px;
 	}
 }
 
