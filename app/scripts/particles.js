@@ -116,7 +116,7 @@ function loop(){
 var opts = {
   particleColor: 'rgba(250,250,250, 0.5)',
   lineColor: 'rgba(250,250,250, 0.5)',
-  particleAmount: 50,
+  particleAmount: 70,
   defaultSpeed: 1,
   variantSpeed: 2,
   defaultRadius: 2,

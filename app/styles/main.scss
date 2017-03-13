@@ -1349,20 +1349,31 @@ s i n g l e
 	background: white;
 	padding-top: 90px;
 
-	.single-social {
+}
+
+.news-more {
+	.leer-mas {
+		color: $primary-red;
+		text-transform: uppercase;
+		font-size: 18px;
 		margin-top: 60px;
 
-		span {
-			text-transform: uppercase;
-			font-weight: 900;
-			color: $secondary-text-color;
-		}
-
-		img {
-			margin: 0 15px;
-		}
-		margin-bottom: 60px;
 	}
+}
+
+.single-social {
+	margin-top: 60px;
+
+	span {
+		text-transform: uppercase;
+		font-weight: 900;
+		color: $secondary-text-color;
+	}
+
+	img {
+		margin: 0 15px;
+	}
+	margin-bottom: 60px;
 }
 
 .boletin-related {
