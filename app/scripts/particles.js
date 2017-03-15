@@ -103,25 +103,28 @@ function setup(){
 
 function loop(){
     window.requestAnimationFrame(loop);
-    drawArea.clearRect(0,0,w,h);
-    for (var i = 0; i < particles.length; i++){
-        particles[i].update();
-        particles[i].draw();
-    }
-    for (var i = 0; i < particles.length; i++){
-        linkPoints(particles[i], particles);
+
+    if (currentSlide == 0) {
+      drawArea.clearRect(0,0,w,h);
+      for (var i = 0; i < particles.length; i++){
+          particles[i].update();
+          particles[i].draw();
+      }
+      for (var i = 0; i < particles.length; i++){
+          linkPoints(particles[i], particles);
+      }
     }
 }
 
 var opts = {
   particleColor: 'rgba(250,250,250, 0.5)',
   lineColor: 'rgba(250,250,250, 0.5)',
-  particleAmount: 70,
+  particleAmount: 60,
   defaultSpeed: 1,
   variantSpeed: 2,
   defaultRadius: 2,
   variantRadius: 1,
-  linkRadius: 160,
+  linkRadius: 150,
   icons: ['.bike-icon']
 };
 
@@ -134,5 +137,7 @@ var grd;
 var delay = 200, tid, w, h, particles,
     rgb = opts.lineColor.match(/\d+/g);
 
-resizeReset();
-setup();
+$(document).ready( function() {
+  resizeReset();
+  setup();
+})

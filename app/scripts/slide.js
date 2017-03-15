@@ -8,11 +8,15 @@ var maxSlide = 3;
 
 $(document).ready(function(){
 
-	$('.movilidad-categoria').mouseenter(function(e){
-		var categoria = $(e.target).attr('data-category');
-		if(categoria == undefined) categoria = 1;
+	$('body').addClass('no-scroll');
+
+	$('.movilidad-categoria').mouseover(function(e){
+		var categoria = $(this).attr('data-category');
+		$('.zoom-image').addClass('hide-image');
+		$('.zoom-image-' + categoria).removeClass('hide-image');
+		// if(categoria == undefined) categoria = 1;
 		//$('.zoom-image').not('[data-zoom="' + categoria +'"]').css({ 'z-index': 0});
-		$('.zoom-image').removeClass('zoom-image-1 zoom-image-2 zoom-image-3').addClass('zoom-image-'+categoria);
+		// $('.zoom-image').removeClass('zoom-image-1 zoom-image-2 zoom-image-3').addClass('zoom-image-'+categoria);
 
 	});
 
@@ -29,18 +33,18 @@ $(document).ready(function(){
 
 		if( movements > 0){
 			for(var i = 0; i < movements; i++){
-				processDown(1000);
+				processDown(1200);
 			}
 
-			// processDown(1000);
+			// processDown(1200);
 
 		}
 
 		if( movements < 0){
 			for(var i = movements ; i < 0; i++) {
-				processUp(1000, false)
+				processUp(1200, false)
 			}
-			// processUp(1000, false)
+			// processUp(1200, false)
 		}
 
 		e.preventDefault();
@@ -56,10 +60,10 @@ $(document).ready(function(){
 
 			if (e.deltaY > 0){
 				//console.log('moving UP the page');
-				processUp(1000, true, e);
+				processUp(1200, true, e);
 			} else {
 				//console.log('moving DOWN the page');
-				processDown(1000);
+				processDown(1200);
 			}
 		}
 
@@ -199,25 +203,21 @@ function postScrollSettings(){
 	}
 }
 
-function stopPlayScroll(e) {
-	if (e) {
-		$(document).on('mousewheel DOMMouseScroll', function(e) {
-			preventDefault(e)
-		});
-		var t = $(document).scrollTop();
-		$(document).on('scroll', function(e) {
-			$(document).scrollTop(t),
-			preventDefault(e)
-		}),
-		$(document).on('touchmove', function(e) {
-			preventDefault(e)
-		})
-	} else
-	$(document).off('mousewheel DOMMouseScroll'),
-	$(document).unbind('scroll'),
-	$(document).off('touchmove')
-}
-
-function mapValues(value, start1, stop1, start2, stop2) {
-	return start2 + (stop2 - start2) * ((value - start1) / (stop1 - start1));
-}
+// function stopPlayScroll(e) {
+// 	if (e) {
+// 		$(document).on('mousewheel DOMMouseScroll', function(e) {
+// 			preventDefault(e)
+// 		});
+// 		var t = $(document).scrollTop();
+// 		$(document).on('scroll', function(e) {
+// 			$(document).scrollTop(t),
+// 			preventDefault(e)
+// 		}),
+// 		$(document).on('touchmove', function(e) {
+// 			preventDefault(e)
+// 		})
+// 	} else
+// 	$(document).off('mousewheel DOMMouseScroll'),
+// 	$(document).unbind('scroll'),
+// 	$(document).off('touchmove')
+// }

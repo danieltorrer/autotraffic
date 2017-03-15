@@ -545,7 +545,7 @@ S l i d e
 	}
 
 	#nodes {
-		border: 2px solid rgba(255, 255, 255, 0.5);
+		// border: 2px solid rgba(255, 255, 255, 0.5);
 		height: 100%;
 		width: 100%;
 		position: absolute;
@@ -597,7 +597,8 @@ section#movilidad {
 
 #movilidad,
 .movilidad-deck {
-	background: url(../images/bike-b.jpg) no-repeat center center;
+	background: url(../images/bike-b.jpg) no-repeat center center fixed;
+	background-size: cover;
 
 	.movilidad-title {
 		margin-bottom: 30px;
@@ -676,7 +677,7 @@ section#movilidad {
 .boletin-cover,
 .nosotros,
 .seguridad {
-	background: url(../images/cctv-b.jpg) no-repeat center center;
+	background: url(../images/cctv-b.jpg) no-repeat center center fixed;
 	background-size: cover;
 
 	h2 {
@@ -698,7 +699,7 @@ section#movilidad {
 }
 
 .boletin-cover {
-	background: url(../images/boletin-b.jpg);
+	background: url(../images/boletin-b.jpg) no-repeat center center fixed;
 	background-size: cover;
 	height: 85vh;
 
@@ -709,7 +710,7 @@ section#movilidad {
 
 .clientes-cover,
 .nosotros-cover {
-	background: url(../images/red-b.jpg) no-repeat center center;
+	background: url(../images/red-b.jpg) no-repeat center center fixed;
 	background-size: cover;
 
 	h3 {
@@ -737,7 +738,8 @@ section#movilidad {
 }
 /*** nosotros ***/
 .nosotros {
-	background: url(../images/nosotros-b.jpg);
+	background: url(../images/nosotros-b.jpg) no-repeat center center fixed;
+	background-size: cover;
 
 	img {
 		width: 120px;
@@ -988,7 +990,7 @@ section#movilidad {
 		left: 0;
 		width: 100%;
 		position: absolute;
-		background: url(../images/moon-b.jpg) no-repeat center center;
+		background: url(../images/moon-b.jpg) no-repeat center center fixed;
 		background-size: cover;
 		height: 600px;
 	}
@@ -1004,29 +1006,29 @@ section#movilidad {
 }
 
 .eficiencia {
-	background: url(../images/eficiencia-b.jpg) no-repeat center center;
+	background: url(../images/eficiencia-b.jpg) no-repeat center center fixed;
 	background-size: cover;
 }
 
 .ambiente {
-	background: url(../images/env-b.jpg) no-repeat center center;
+	background: url(../images/env-b.jpg) no-repeat center center fixed;
 	background-size: cover;
 }
 
 .contact-cover {
-	background: url("../images/office-b.jpg");
+	background: url("../images/office-b.jpg") no-repeat center center fixed;
 	background-size: cover;
 }
 
 .trabaja-cover {
-	background: url("../images/trabaja-b.jpg");
+	background: url("../images/trabaja-b.jpg") no-repeat center center fixed;
 	background-size: cover;
 }
 
 .stats-seguridad-description {
 	.col-sm-6 {
 		height: 480px;
-		background: white;
+		background: #fbfbfb;
 
 		.stats-quote {
 			height: 100%;
@@ -1157,7 +1159,7 @@ section#movilidad {
 .book {
 	padding: 90px 0;
 	background-color: #222120;
-	background: url(../images/book-b.jpg) no-repeat center center;
+	background: url(../images/book-b.jpg) no-repeat center center fixed;
 	background-size: cover;
 
 
@@ -1315,7 +1317,7 @@ s i n g l e
 ********/
 
 .single-cover {
-	background: url(../images/lapuebla-b.jpg) no-repeat center center;
+	background: url(../images/lapuebla-b.jpg) no-repeat center center fixed;
 	background-size: cover;
 	height: 70vh;
 
@@ -1443,7 +1445,7 @@ c o n t a c t
 *******/
 
 .contact-cover {
-	/* background: url(../images/cover-b.png) no-repeat center center;*/
+	/* background: url(../images/cover-b.png) no-repeat center center fixed;*/
 	/* background-size: cover;*/
 
 	.container {
@@ -1916,7 +1918,7 @@ c l a s s e s
 		position: relative;
 		height: 100%;
 		padding-top: 90px;
-		background: url(../images/bike-3-b.jpg) no-repeat center center;
+		background: url(../images/bike-3-b.jpg) no-repeat center center;// fixed;
 		background-size: cover;
 
 		p {
@@ -2029,11 +2031,16 @@ c l a s s e s
 	position: absolute;
 	top: 0;
 	left: 0;
+	z-index: 0;
 
 	&.zoom-animate {
 		-webkit-animation: growimageHome 15s 0s linear infinite alternate;
 		-ms-animation: growimageHome 15s 0s linear infinite alternate;
 		animation: growimageHome 15s 0s linear infinite alternate;
+	}
+
+	&.hide-image {
+		z-index: -1;
 	}
 }
 
@@ -2060,17 +2067,17 @@ c l a s s e s
 
 
 .zoom-image-2 {
-	background: url(../images/cctv-b.jpg);
+	background: url(../images/cctv-b.jpg) no-repeat center center fixed;
 	background-size: cover;
 }
 
 .zoom-image-1 {
-	background: url(../images/bike-b.jpg);
+	background: url(../images/bike-b.jpg) no-repeat center center fixed;
 	background-size: cover;
 }
 
 .zoom-image-3 {
-	background: url(../images/env-b.jpg);
+	background: url(../images/env-b.jpg) no-repeat center center fixed;
 	background-size: cover;
 }
 
@@ -2441,4 +2448,41 @@ c l a s s e s
 	label {
 		text-transform: uppercase;
 	}
+}
+
+
+nav.menu-container .menu-list .menu-item.social-icons a {
+  display: inline;
+  left: 0;
+  margin: 0 30px;
+  height: 25px;
+  width: auto;
+  transition: none;
+}
+
+.related-item .solution-item {
+    overflow: hidden;
+}
+
+.related-item .solution-img{
+  max-height: 330px;
+}
+
+.single-extract p {
+  color: white;
+  font-size: 12px;
+}
+
+#page {
+    -webkit-transition: -webkit-transform .35s, opacity .35s;
+    -ms-transition: -o-transform .35s, opacity .35s;
+    -o-transition: -o-transform .35s, opacity .35s;
+    transition: transform .35s, opacity .35s;
+}
+#page.slide-out  {
+    -webkit-transform: translate3d( 150px, 0px, 0 );
+    -ms-transform: translate3d( 150px, 0px, 0 );
+    -o-transform: translate3d( 150px, 0px, 0 );
+    transform: translate3d( 150px, 0px, 0 );
+    opacity: 0;
 }
