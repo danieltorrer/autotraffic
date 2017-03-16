@@ -21,7 +21,7 @@ $(document).ready(function(){
 	});
 
 
-
+	// click circulo de
 	$('.nav-home li').click( function (e) {
 		var targetSlide = $(this).attr('data-slide');
 		$('.nav-home li').removeClass('active');
@@ -54,7 +54,7 @@ $(document).ready(function(){
 	$('.scroll-body .slide[data-slide="'+ (currentSlide+2) +'"]').velocity({ translateY: '100%'}, {duration: 0});
 
 
-	$(document).on('mousewheel DOMMouseScroll', function(e) {
+	$(document).on('mousewheel', function(e) {
 		// $('.nav-home li').removeClass('active');
 		if(!scrolling && !menuOpened){
 
@@ -202,22 +202,3 @@ function postScrollSettings(){
 		$('body').addClass('no-scroll');
 	}
 }
-
-// function stopPlayScroll(e) {
-// 	if (e) {
-// 		$(document).on('mousewheel DOMMouseScroll', function(e) {
-// 			preventDefault(e)
-// 		});
-// 		var t = $(document).scrollTop();
-// 		$(document).on('scroll', function(e) {
-// 			$(document).scrollTop(t),
-// 			preventDefault(e)
-// 		}),
-// 		$(document).on('touchmove', function(e) {
-// 			preventDefault(e)
-// 		})
-// 	} else
-// 	$(document).off('mousewheel DOMMouseScroll'),
-// 	$(document).unbind('scroll'),
-// 	$(document).off('touchmove')
-// }

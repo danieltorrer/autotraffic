@@ -6,8 +6,6 @@ var resizeReset = function() {
     h = canvasBody.height;
 }
 
-
-
 window.addEventListener('resize', function(){
     deBouncer();
 });
