@@ -138,8 +138,8 @@
 
       <!--  Home starts -->
       <section id="home" class="z-10 home valign skrollr-deck slide fixed " data-slide="0">
-        <div class="tilt-backup"></div>
-        <canvas id="nodes" data-tilt></canvas>
+        <div class="tilt-backup gradient-1"></div>
+        <canvas id="nodes" data-tilt data-tilt-reset="false" data-tilt-max="20"  data-tilt-perspective="1000" data-tilt-scale="1.2"></canvas>
         <div class="valign-item">
           <div class="container">
             <div class="row">
@@ -153,7 +153,7 @@
           </div>
 
           <div class="scroll-item text-center">
-            <p>
+            <p class="scroll-slide-arrow">
               <img class="scale-img flecha-icon flecha-icon-4" src="images/flecha-icon.png" alt="scroll">
               <img class="scale-img flecha-icon flecha-icon-3" src="images/flecha-icon.png" alt="scroll">
               <img class="scale-img flecha-icon flecha-icon-2" src="images/flecha-icon.png" alt="scroll">
@@ -387,9 +387,10 @@
 
 <!-- build:js scripts/vendor.js -->
 <script src="/bower_components/jquery/dist/jquery.js"></script>
-<!-- <script src="/bower_components/modernizr/modernizr.js"></script> -->
+<script src="/bower_components/modernizr/modernizr.js"></script>
 <script src="/bower_components/velocity/velocity.js"></script>
-<!-- <script src="/bower_components/slick-carousel/slick/slick.js"></script> -->
+<script src="/bower_components/velocity/velocity.ui.js"></script>
+<script src="/bower_components/slick-carousel/slick/slick.js"></script>
 <!-- endbuild -->
 
 <!-- build:js scripts/plugins.js -->

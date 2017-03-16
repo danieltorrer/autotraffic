@@ -1,6 +1,6 @@
 var resizeReset = function() {
-    canvasBody.width = window.innerWidth;
-    canvasBody.height = window.innerHeight;
+    canvasBody.width = window.innerWidth * 1.3;
+    canvasBody.height = window.innerHeight * 1.3;
 
     w = canvasBody.width;
     h = canvasBody.height;

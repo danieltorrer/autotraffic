@@ -39,13 +39,19 @@ $(document).ready(function() {
   });
 
   $('.item-sub-menu').click(function(){
+    var a = $(this);
     if(submenuOpened){
       $(this).next().velocity('slideUp', {
         duration: 100
       });
+
     } else {
+      $(a).parent().find('ul li.menu-item').velocity('transition.flipXIn', {
+          stagger: 70,
+          duration: 600
+      });
       $(this).next().velocity('slideDown', {
-        duration: 100
+        duration: 100,
       });
     }
 

@@ -14,13 +14,12 @@ $(document).ready(function(){
 		var categoria = $(this).attr('data-category');
 		$('.zoom-image').addClass('hide-image');
 		$('.zoom-image-' + categoria).removeClass('hide-image');
-		// if(categoria == undefined) categoria = 1;
-		//$('.zoom-image').not('[data-zoom="' + categoria +'"]').css({ 'z-index': 0});
-		// $('.zoom-image').removeClass('zoom-image-1 zoom-image-2 zoom-image-3').addClass('zoom-image-'+categoria);
-
 	});
 
-
+	$('.scroll-slide-arrow').click(function(e){
+		e.preventDefault();
+		processDown(1200);
+	})
 	// click circulo de
 	$('.nav-home li').click( function (e) {
 		var targetSlide = $(this).attr('data-slide');
