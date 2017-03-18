@@ -499,21 +499,21 @@ S l i d e
 }
 
 
-@-webkit-keyframes gradientAnimation {
-	0%{background-position:50% 0%}
-	50%{background-position:50% 100%}
-	100%{background-position:50% 0%}
-}
-@-moz-keyframes gradientAnimation {
-	0%{background-position:50% 0%}
-	50%{background-position:50% 100%}
-	100%{background-position:50% 0%}
-}
-@keyframes gradientAnimation {
-	0%{background-position:50% 0%}
-	50%{background-position:50% 100%}
-	100%{background-position:50% 0%}
-}
+// @-webkit-keyframes gradientAnimation {
+// 	0%{background-position:50% 0%}
+// 	50%{background-position:50% 100%}
+// 	100%{background-position:50% 0%}
+// }
+// @-moz-keyframes gradientAnimation {
+// 	0%{background-position:50% 0%}
+// 	50%{background-position:50% 100%}
+// 	100%{background-position:50% 0%}
+// }
+// @keyframes gradientAnimation {
+// 	0%{background-position:50% 0%}
+// 	50%{background-position:50% 100%}
+// 	100%{background-position:50% 0%}
+// }
 .home {
 	background: transparent;
 
@@ -536,16 +536,33 @@ S l i d e
 			background: -ms-linear-gradient(top, rgba(225,34,47,1) 0%, rgba(170,26,36,1) 100%);
 			background: linear-gradient(to bottom, rgba(225,34,47,1) 0%, rgba(170,26,36,1) 100%);
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1222f', endColorstr='#aa1a24', GradientType=0 );
+			transform: translate3d(0, 0, 0);
 		}
 
 		// green
 		&.gradient-2 {
-
+			background: rgba(225,34,47,1);
+			background: -moz-linear-gradient(top, #c3d102 0%, #889201 100%);
+			background: -webkit-gradient(left top, left bottom, color-stop(0%, #c3d102), color-stop(100%, #889201));
+			background: -webkit-linear-gradient(top, #c3d102 0%, #889201 100%);
+			background: -o-linear-gradient(top, #c3d102 0%, #889201 100%);
+			background: -ms-linear-gradient(top, #c3d102 0%, #889201 100%);
+			background: linear-gradient(to bottom, #c3d102 0%, #889201 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c3d102', endColorstr='#889201', GradientType=0 );
+			transform: translate3d(0, 0, 0);
 		}
 
 		//
 		&.gradient-3 {
-
+			background: rgba(225,34,47,1);
+			background: -moz-linear-gradient(top, #27c5d5 0%, #1b8a95 100%);
+			background: -webkit-gradient(left top, left bottom, color-stop(0%, #27c5d5), color-stop(100%, #1b8a95));
+			background: -webkit-linear-gradient(top, #27c5d5 0%, #1b8a95 100%);
+			background: -o-linear-gradient(top, #27c5d5 0%, #1b8a95 100%);
+			background: -ms-linear-gradient(top, #27c5d5 0%, #1b8a95 100%);
+			background: linear-gradient(to bottom, #27c5d5 0%, #1b8a95 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#27c5d5', endColorstr='#1b8a95', GradientType=0 );
+			transform: translate3d(0, 0, 0);
 		}
 
 		// background: linear-gradient(180deg, #e22d35, #27c5d5, #c3d102);
@@ -622,6 +639,7 @@ section#movilidad {
 
 	.movilidad-title {
 		margin-bottom: 30px;
+		transform: translate3d(0, 0, 0);
 
 		h2 {
 			color: white;
@@ -641,15 +659,18 @@ section#movilidad {
 	position: relative;
 	padding: 45px 0;
 	border: 1px solid rgba(255, 255, 255, 0);
+	transform: translate3d(0, 0, 0);
 
 	img {
 		width: 55px;
 		height: auto;
+		transform: translate3d(0, 0, 0);
 	}
 	p {
 		color: #fff;
 		text-transform: uppercase;
 		margin-top: 15px;
+		transform: translate3d(0, 0, 0);
 	}
 
 	.movilidad-descripcion {
@@ -659,6 +680,7 @@ section#movilidad {
 		position: absolute;
 		left: 0;
 		bottom: -19px;
+		transform: translate3d(0, 0, 0);
 	}
 
 	&:hover {
@@ -666,6 +688,7 @@ section#movilidad {
 
 		.movilidad-descripcion {
 			visibility: visible;
+			transform: translate3d(0, 0, 0);
 		}
 
 		.button.button-primary {
@@ -875,6 +898,7 @@ section#movilidad {
 .vacante-item {
 	//height: 200px;
 	margin-bottom: 30px;
+	transform: translate3d(0, 0, 0);
 
 	.row {
 		background: white;
@@ -1844,6 +1868,7 @@ c l a s s e s
 .news-title {
 	margin-bottom: 60px;
 	height: 72px;
+	transform: translate3d(0, 0, 0);
 
 	.col-sm-3 {
 		vertical-align: top;
@@ -1897,6 +1922,7 @@ c l a s s e s
 	background: white;
 	padding: 30px 45px;
 	color: #333;
+	transform: translate3d(0, 0, 0);
 	text-align: left;
 	background: url(../images/news-b.jpg) no-repeat center center;
 	background-size: cover;
@@ -2107,13 +2133,13 @@ c l a s s e s
 }
 
 
-.zoom-image-2 {
+.zoom-image-1 {
 	background: url(../images/cctv-b.jpg) no-repeat center center fixed;
 	background-size: cover;
 }
 
-.zoom-image-1 {
-	background: url(../images/bike-b.jpg) no-repeat center center fixed;
+.zoom-image-2 {
+	background: url(../images/eficiencia-b.jpg) no-repeat center center fixed;
 	background-size: cover;
 }
 
@@ -2530,4 +2556,19 @@ nav.menu-container .menu-list .menu-item.social-icons a {
 
 .scroll-slide-arrow {
 	cursor: pointer;
+}
+
+.gif-overlay {
+	position: relative;
+
+	h4 {
+		position: absolute;
+		top: 40%;
+		font-size: 36px;
+	}
+}
+
+.mundo-gif {
+	width: 300px;
+	height: auto;
 }

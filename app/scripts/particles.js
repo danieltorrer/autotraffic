@@ -123,7 +123,7 @@ var opts = {
   defaultRadius: 2,
   variantRadius: 1,
   linkRadius: 170,
-  icons: ['.bike-icon']
+  icons: ['.bike-icon', '.network-icon', '.bus-icon', '.car-icon','.cel-icon','.laptop-icon','.head-icon']
 };
 
 var canvasBody = document.getElementById('nodes'),
