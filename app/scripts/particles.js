@@ -4,6 +4,12 @@ var resizeReset = function() {
 
     w = canvasBody.width;
     h = canvasBody.height;
+
+    if(window.innerWidth < 768){
+      numParticles = 40;
+    } else {
+      numParticles = 100;
+    }
 }
 
 window.addEventListener('resize', function(){
@@ -93,6 +99,8 @@ function setup(){
     particles = [];
     resizeReset();
 
+    opts.particleAmount = numParticles;
+
     for (var i = 0; i < opts.particleAmount; i++){
         particles.push( new Particle() );
     }
@@ -114,10 +122,12 @@ function loop(){
     }
 }
 
+var numParticles = 40;
+
 var opts = {
   particleColor: 'rgba(250,250,250, 0.5)',
   lineColor: 'rgba(250,250,250, 0.5)',
-  particleAmount: 80,
+  particleAmount: numParticles,
   defaultSpeed: 1,
   variantSpeed: 2,
   defaultRadius: 2,

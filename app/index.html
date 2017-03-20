@@ -62,7 +62,7 @@
     </p>
   </header>
 
-  <nav class="nav-home" aria-hidden="true">
+  <nav class="nav-home hidden-sm hidden-xs" aria-hidden="true">
     <ul>
       <li data-slide="0" class="active" data-href="#home"><span>Home</span></li>
       <li data-slide="1" data-href="#movilidad"><span>Movilidad</span></li>
@@ -196,7 +196,7 @@
                   <img src="images/shield-icon.png" alt="">
                   <p class="font-title">Seguridad</p>
 
-                  <div class="movilidad-descripcion">
+                  <div class="movilidad-descripcion hidden-sm hidden-xs">
                     <a class="button button-primary button-animated" href="seguridad.html">+</a>
                   </div>
                 </div>
@@ -209,7 +209,7 @@
                   <img src="images/hand-icon.png" alt="">
                   <p class="font-title">eficiencia</p>
 
-                  <div class="movilidad-descripcion">
+                  <div class="movilidad-descripcion hidden-sm hidden-xs">
                     <a class="button button-primary button-animated" href="eficiencia.html">+</a>
                   </div>
                 </div>
@@ -222,7 +222,7 @@
                   <img src="images/leaf-icon.png" alt="">
                   <p class="font-title">Medio ambiente</p>
 
-                  <div class="movilidad-descripcion">
+                  <div class="movilidad-descripcion hidden-sm hidden-xs">
                     <a class="button button-primary button-animated" href="medio-ambiente.html">+</a>
                   </div>
                 </div>
@@ -259,8 +259,6 @@
               </div>
             </div>
           </div>
-
-
 
         </div>
       </section>
@@ -336,7 +334,7 @@
       <section class="newsletter">
         <div class="container valign">
           <div class="row valign-item">
-            <div class="col-sm-6 col-sm-offset-3">
+            <div class="col-sm-6 col-sm-offset-3 col-xs-12">
               <div class="text-center">
                 <h3 class="font-title white-text">boletín de noticias</h3>
                 <p class="font-title white-text">¿Te gustaría recibir información de movilidad sustentable? ¡Inscríbete!</p>
@@ -374,8 +372,6 @@
           </div>
         </div>
       </footer>
-
-
     </div>
 
 
@@ -403,6 +399,8 @@
 <!-- endbuild -->
 
 <!-- build:js scripts/plugins.js -->
+<script src="/bower_components/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+<script src="scripts/TweenMax.min.js"></script>
 <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
 <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
 <!-- endbuild -->

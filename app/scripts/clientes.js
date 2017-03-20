@@ -9,7 +9,21 @@ $(document).ready(function(){
     slidesToScroll: 4,
     arrows: false,
     dots: true,
-    autoplay: true
+    autoplay: true,
+    // mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: 'unslick'
+          // slidesToShow: 1,
+          // slidesToScroll: 1,
+          // infinite: false,
+          // arrows: false,
+          // dots: false,
+          // autoplay: false
+
+      }
+    ]
   });
 
   $('.cliente-button').click(function() {

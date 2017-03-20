@@ -917,17 +917,21 @@ section#movilidad {
 				border: none;
 				background: white;
 				color: $primary-red;
+				transform: translate3d(0, 0, 0);
 			}
 
 			span.decorator {
 				background: white;
+				transform: translate3d(0, 0, 0);
 			}
 
 			h5 {
 				color: white;
+				transform: translate3d(0, 0, 0);
 			}
 
 			.vacante-info {
+				transform: translate3d(0, 0, 0);
 				img {
 					display: inline-block;
 					margin-right: 5px;
@@ -937,6 +941,7 @@ section#movilidad {
 				}
 				p {
 					color: white;
+					transform: translate3d(0, 0, 0);
 				}
 			}
 		}
@@ -2435,7 +2440,7 @@ c l a s s e s
 
 			.button {
 				position: absolute;
-				left: calc(50% - 13px);
+				left: calc(50% - 25px);
 				top: calc(50% - 13px);
 			}
 		}
@@ -2571,4 +2576,284 @@ nav.menu-container .menu-list .menu-item.social-icons a {
 .mundo-gif {
 	width: 300px;
 	height: auto;
+}
+
+.slick-track {
+	background: #f7f7f7;
+}
+
+.animation {
+	position: relative;
+
+	.nube-1 {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.nube-2 {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	.nube-3 {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+
+@media (max-width: 767px) {
+
+	//general
+	header h1 svg {
+		width: 160px;
+		height: auto;
+	}
+
+	// menu
+
+	nav.menu-container .menu-list .menu-item{
+		padding: 10px 0;
+
+		&.social-icons {
+			left: 0;
+			margin-left: 0px;
+
+			svg {
+				margin: 0 10px;
+				height: 20px;
+				width: auto;
+			}
+		}
+
+		a {
+			margin-left: 0px;
+			left: 0;
+			font-size: 24px;
+		}
+
+		.menu-item-list {
+			padding-left: 30px;
+		}
+	}
+
+	// slides
+	.home h2 {
+		font-size: 36px;
+	}
+	// movilidad
+	#movilidad {
+		padding-top: 45px;
+	}
+
+	.movilidad-categoria {
+		padding: 15px 30px;
+		text-align: left;
+
+		p {
+			padding-left: 30px;
+			display: inline;
+		}
+	}
+
+	// news
+	#news {
+
+		height: auto;
+
+		.news-title {
+			height: auto;
+
+			.col-sm-2 {
+				text-align: left;
+			}
+		}
+
+		.news-container {
+			height: auto;
+
+			.news-item {
+				height: auto;
+
+				div {
+					height: auto;
+				}
+
+				.button.button-animated {
+					position: relative;
+				}
+
+				&:hover {
+					.button.button-animated {
+						position: relative;
+					}
+				}
+			}
+		}
+	}
+
+	// newsletter
+
+	.newsletter {
+		height: auto;
+
+		.container {
+			height: auto;
+		}
+
+		.col-sm-6 .newsletter-form {
+			width: auto;
+
+			.form-control {
+				width: 100%;
+				margin-top: 15px;
+			}
+		}
+	}
+
+	footer .legal {
+
+		text-align: left;
+
+		img {
+			width: 200px;
+			height: auto;
+		}
+	}
+
+	// nosotros
+
+	.convenio-item {
+		height: auto;
+
+		h3 {
+			font-size: 24px;
+		}
+
+		p {
+			font-size: 16px;
+		}
+
+		.convenio-logo {
+				max-width: 200px;
+				height: auto;
+		}
+	}
+
+	.book {
+		// background: url(../images/book-b.jpg) no-repeat right top fixed;
+	}
+
+	.everything .everything-title {
+		padding-left: 0px;
+		margin-bottom: 30px;
+	}
+
+	.three-ambiente ul li,
+	.two-eficiencia ul li,
+	.one-seguridad ul li {
+		font-size: 18px;;
+	}
+
+	.stats-seguridad-description .col-sm-6:first-child h3 {
+		font-size: 36px;
+	}
+
+	.stats-seguridad-description .col-sm-6 {
+
+		height: auto;
+
+		.stats-quote{
+			padding: 15px 30px;
+		}
+
+		.stats-list {
+			height: auto;
+			padding: 30px 0px;
+		}
+
+	}
+
+	.stats-number {
+		padding: 30px 0;
+	}
+
+	.solution-item {
+
+		.solution-description {
+			padding: 15px;
+			height: 100%;
+
+			h4 {
+				font-size: 20px;
+			}
+
+			a:not(.button) {
+				font-size: 12px;
+			}
+		}
+
+		&.small {
+			.solution-description {
+				padding: 30px 15px;
+			}
+		}
+	}
+
+	// clientes
+	.clientes-cover {
+		margin-top: 60px;
+		margin-bottom: 30px;
+	}
+
+	.carousel{
+		max-width: 100% !important;
+	}
+
+	.carousel-item {
+		.carrousel-content {
+			max-width: 300px !important;
+			height: auto;
+		}
+
+		// width: 350px !important;
+		height: auto;
+	}
+
+	.modal-body {
+		.cliente-logo {
+			height: auto;
+			margin-top: 15px;
+			margin-bottom: 15px;
+
+			img {
+				width: 100%;
+				height: auto;
+				// width: 120px;
+				// height: auto;
+			}
+
+			h3 {
+				font-size: 18px;
+			}
+		}
+
+		padding-bottom: 30px;
+	}
+
+	.boletin-related .solution-item .solution-description {
+		padding: 30px;
+	}
+
+	.nosotros-cover {
+
+		padding-bottom: 30px;
+
+		.perks {
+			width: 50%;
+		}
+	}
+
 }
