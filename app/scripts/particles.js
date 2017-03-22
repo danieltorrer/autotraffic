@@ -8,7 +8,7 @@ var resizeReset = function() {
     if(window.innerWidth < 768){
       numParticles = 40;
     } else {
-      numParticles = 100;
+      numParticles = 120;
     }
 }
 
@@ -52,7 +52,12 @@ var Particle = function(xPos, yPos){
     this.directionAngle = Math.floor(Math.random() * 360);
     this.color = opts.particleColor;
     this.radius = opts.defaultRadius + Math.random() * opts. variantRadius;
-    this.isIcon = Math.random() * 100 >= 90 ? true : false;
+    this.isIcon = Math.random() * 100 >= 93 ? true : false;
+    // this.opacity = Number(Math.random()).toFixed(2);
+    this.opacity = 0.2 * (Math.floor(Math.random() * 10) % 5);
+    //this.opacity = 0.1;
+    this.increment = 0.03;
+    // console.log(this.opacity);
 
 
     if( this.isIcon ){
@@ -84,7 +89,18 @@ var Particle = function(xPos, yPos){
     };
     this.draw = function(){
       if(this.isIcon){
+        drawArea.save();
+        drawArea.globalAlpha = this.opacity;
         drawArea.drawImage( this.icon, this.x, this.y);
+        if(this.opacity >= 1){
+          this.increment = -0.02;
+        } else {
+          if( this.opacity <= 0.1)
+          this.increment = 0.02;
+        }
+        // console.log(this.opacity);
+        this.opacity = + this.opacity + this.increment;
+        drawArea.restore();
       } else {
         drawArea.beginPath();
         drawArea.arc(this.x, this.y, this.radius, 0, Math.PI*2);

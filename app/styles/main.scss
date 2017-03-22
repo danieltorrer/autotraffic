@@ -1755,6 +1755,24 @@ c l a s s e s
 }
 
 
+.flecha-icon-1 {
+	animation: pulse-1 2s infinite;
+	-webkit-animation: pulse-1 2s infinite;
+}
+.flecha-icon-2 {
+	animation: pulse-2 2s infinite;
+	-webkit-animation: pulse-2 2s infinite;
+}
+.flecha-icon-3 {
+	animation: pulse-3 2s infinite;
+	-webkit-animation: pulse-3 2s infinite;
+}
+.flecha-icon-4 {
+	animation: pulse-4 2s infinite;
+	-webkit-animation: pulse-4 2s infinite;
+}
+
+
 
 @keyframes pulse-1 {
 	0%, 100% {
@@ -2588,7 +2606,7 @@ nav.menu-container .menu-list .menu-item.social-icons a {
 	.nube-1 {
 		position: absolute;
 		top: 0;
-		left: 0;
+		right: 0;
 	}
 
 	.nube-2 {
@@ -2856,4 +2874,20 @@ nav.menu-container .menu-list .menu-item.social-icons a {
 		}
 	}
 
+}
+
+.two-eficiencia {
+	padding-top: 0;
+}
+
+.fondo-edificios {
+	position: relative;
+
+	.two-content {
+		padding-top: 90px;
+		top: 0;
+		left: 0;
+		position: absolute;
+		width: 100%;
+	}
 }
