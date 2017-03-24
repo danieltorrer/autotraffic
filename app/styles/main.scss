@@ -525,6 +525,7 @@ S l i d e
 		top: 0;
 		left: 0;
 		z-index: -2;
+		transform: translate3d(0, 0, 0);
 
 		// rojo
 		&.gradient-1 {
@@ -584,7 +585,13 @@ S l i d e
 		top: 0;
 		left: 0;
 		z-index: -1;
-		transform: perspective(1600px) scale3d(1.2, 1.2, 1.2);
+		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+					transform: perspective(1600px) scale3d(1.2, 1.2, 1.2);
+		-webkit-transform: -webkit-perspective(1600px) scale3d(1.2, 1.2, 1.2);
+		// -webkit-transform: translateZ(-1px);
+		// z-index: 100;
+		// -webkit-transform-style: flat;
 		// overflow: hidden;
 		// transform: scale(1.2);
 		// transform: translate3d(0, 0, 0);

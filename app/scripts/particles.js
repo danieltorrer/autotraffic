@@ -12,13 +12,13 @@ var resizeReset = function() {
       numParticles = 120;
       linkRadius = 120;
     }
-    if(window.innerWidth > 1201 && window.innerWidth < 1920) {
+    if(window.innerWidth > 1201 && window.innerWidth <= 1920) {
       numParticles = 190;
       linkRadius = 160;
     }
-    if(window.innerWidth >= 1920) {
-      numParticles = 210;
-      linkRadius = 180;
+    if(window.innerWidth > 1921) {
+      numParticles = 220;
+      linkRadius = 190;
     }
 }
 
@@ -68,10 +68,11 @@ var Particle = function(xPos, yPos){
     this.radius = opts.defaultRadius + Math.random() * opts. variantRadius;
     this.isIcon = Math.random() * 100 >= 95 ? true : false;
     // this.opacity = Number(Math.random()).toFixed(2);
-    this.opacity = 0.2 * (Math.floor(Math.random() * 10) % 5);
+    this.opacity = Math.floor(Math.random() * 10) % 2 == 0 ? 0.15 : 0.99;
     //this.opacity = 0.1;
-    this.increment = 0.03;
-    // console.log(this.opacity);
+    this.increment = 0.01;
+    this.transparent = false;
+    console.log(this.opacity);
 
 
     if( this.isIcon ){
@@ -105,12 +106,14 @@ var Particle = function(xPos, yPos){
       if(this.isIcon){
         drawArea.save();
         drawArea.globalAlpha = this.opacity;
-        drawArea.drawImage( this.icon, this.x, this.y);
-        if(this.opacity >= 1){
+        if( this.opacity >= 0){
+          drawArea.drawImage( this.icon, this.x, this.y);
+        }
+        if(this.opacity >= 0.98){
           this.increment = -0.01;
         } else {
-          if( this.opacity <= 0.1)
-          this.increment = 0.01;
+          if( this.opacity <= -0.30)
+          this.increment = 0.02;
         }
         // console.log(this.opacity);
         this.opacity = + this.opacity + this.increment;
@@ -131,7 +134,7 @@ function setup(){
 
     opts.particleAmount = numParticles;
     opts.linkRadius = linkRadius;
-    console.log(opts.linkRadius);
+    // console.log(opts.linkRadius);
     for (var i = 0; i < opts.particleAmount; i++){
 
         particles.push( new Particle() );
