@@ -1052,7 +1052,7 @@ section#movilidad {
 }
 
 .three-ambiente {
-	background: #2b74b2;
+	background: #1440e3;
 }
 
 .eficiencia {
@@ -2584,14 +2584,19 @@ nav.menu-container .menu-list .menu-item.social-icons a {
 .gif-overlay {
 	position: relative;
 
-	h4 {
+	.trazando {
+		// width: 300px;
+		// height: auto;
 		position: absolute;
 		top: 40%;
+		left: 0;
 		font-size: 36px;
 	}
 }
 
 .mundo-gif {
+	margin-top: 60px;
+	margin-left: 120px;
 	width: 300px;
 	height: auto;
 }
@@ -2890,4 +2895,9 @@ nav.menu-container .menu-list .menu-item.social-icons a {
 		position: absolute;
 		width: 100%;
 	}
+}
+
+.icon-particle {
+	width: 40px;
+	height: auto;
 }

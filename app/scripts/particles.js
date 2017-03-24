@@ -4,11 +4,21 @@ var resizeReset = function() {
 
     w = canvasBody.width;
     h = canvasBody.height;
-
-    if(window.innerWidth < 768){
+    if(window.innerWidth < 768 ){
       numParticles = 40;
-    } else {
+      linkRadius = 80;
+    }
+    if(window.innerWidth >= 768 && window.innerWidth < 1200){
       numParticles = 120;
+      linkRadius = 120;
+    }
+    if(window.innerWidth > 1201 && window.innerWidth < 1920) {
+      numParticles = 190;
+      linkRadius = 160;
+    }
+    if(window.innerWidth >= 1920) {
+      numParticles = 210;
+      linkRadius = 180;
     }
 }
 
@@ -33,13 +43,17 @@ var linkPoints = function(point1, hubs){
         var distance = checkDistance(point1.x, point1.y, hubs[i].x, hubs[i].y);
         var opacity = 1 - distance / opts.linkRadius;
         if (opacity > 0) {
+            // console.log(opacity);
+            drawArea.save();
+            drawArea.globalAlpha = opacity;
             drawArea.lineWidth = 0.5;
-            drawArea.strokeStyle = 'rgba(255, 255, 255, 0.3 )';
+            drawArea.strokeStyle = 'rgba(255, 255, 255, 1 )';
             drawArea.beginPath();
             drawArea.moveTo(point1.x, point1.y);
             drawArea.lineTo(hubs[i].x, hubs[i].y);
             drawArea.closePath();
             drawArea.stroke();
+            drawArea.restore();
         }
       }
     }
@@ -52,7 +66,7 @@ var Particle = function(xPos, yPos){
     this.directionAngle = Math.floor(Math.random() * 360);
     this.color = opts.particleColor;
     this.radius = opts.defaultRadius + Math.random() * opts. variantRadius;
-    this.isIcon = Math.random() * 100 >= 93 ? true : false;
+    this.isIcon = Math.random() * 100 >= 95 ? true : false;
     // this.opacity = Number(Math.random()).toFixed(2);
     this.opacity = 0.2 * (Math.floor(Math.random() * 10) % 5);
     //this.opacity = 0.1;
@@ -93,10 +107,10 @@ var Particle = function(xPos, yPos){
         drawArea.globalAlpha = this.opacity;
         drawArea.drawImage( this.icon, this.x, this.y);
         if(this.opacity >= 1){
-          this.increment = -0.02;
+          this.increment = -0.01;
         } else {
           if( this.opacity <= 0.1)
-          this.increment = 0.02;
+          this.increment = 0.01;
         }
         // console.log(this.opacity);
         this.opacity = + this.opacity + this.increment;
@@ -116,8 +130,10 @@ function setup(){
     resizeReset();
 
     opts.particleAmount = numParticles;
-
+    opts.linkRadius = linkRadius;
+    console.log(opts.linkRadius);
     for (var i = 0; i < opts.particleAmount; i++){
+
         particles.push( new Particle() );
     }
     window.requestAnimationFrame(loop);
@@ -139,6 +155,7 @@ function loop(){
 }
 
 var numParticles = 40;
+var linkRadius = 170;
 
 var opts = {
   particleColor: 'rgba(250,250,250, 0.5)',
@@ -148,8 +165,8 @@ var opts = {
   variantSpeed: 2,
   defaultRadius: 2,
   variantRadius: 1,
-  linkRadius: 170,
-  icons: ['.bike-icon', '.network-icon', '.bus-icon', '.car-icon','.cel-icon','.laptop-icon','.head-icon']
+  linkRadius: linkRadius,
+  icons: ['.bike-icon', '.network-icon', '.bus-icon', '.car-icon','.cel-icon','.laptop-icon']
 };
 
 var canvasBody = document.getElementById('nodes'),
