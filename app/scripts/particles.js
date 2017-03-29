@@ -6,7 +6,7 @@ var resizeReset = function() {
     h = canvasBody.height;
     if(window.innerWidth < 768 ){
       numParticles = 40;
-      linkRadius = 80;
+      linkRadius = 90;
     }
     if(window.innerWidth >= 768 && window.innerWidth < 1200){
       numParticles = 120;
@@ -72,7 +72,7 @@ var Particle = function(xPos, yPos){
     //this.opacity = 0.1;
     this.increment = 0.01;
     this.transparent = false;
-    console.log(this.opacity);
+    // console.log(this.opacity);
 
 
     if( this.isIcon ){
