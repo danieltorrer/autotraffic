@@ -2696,6 +2696,11 @@ nav.menu-container .menu-list .menu-item.social-icons a {
 @media (max-width: 767px) {
 
 	//general
+	header {
+		background: rgba(0, 0, 0, 0.2);
+		height: 65px;
+	}
+
 	header h1 svg {
 		width: 160px;
 		height: auto;
