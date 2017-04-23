@@ -8,11 +8,13 @@ $(document).ready(function(){
     slidesToShow: 1,
     // centerMode: true,
     slidesToScroll: 1,
-    arrows: false,
+    arrows: true,
     dots: true,
-    autoplay: true,
+    autoplay: false,
     vertical: true,
     mobileFirst: true,
+    appendArrows: $('.slide-vertical .arrows-container'),
+
     responsive: [
       {
         breakpoint: 768,
@@ -21,10 +23,12 @@ $(document).ready(function(){
           slidesToShow: 1,
           // centerMode: true,
           slidesToScroll: 1,
-          arrows: false,
+          arrows: true,
           dots: true,
-          autoplay: true,
-          vertical: true
+          autoplay: false,
+          vertical: true,
+          appendArrows: $('.slide-vertical .arrows-container')
+
         }
       },
     {
@@ -33,7 +37,9 @@ $(document).ready(function(){
         vertical: false,
         slidesToScroll: 1,
         slidesToShow: 1,
-        autoplay: true
+        autoplay: false,
+        arrows:  true,
+        appendArrows: $('.slide-vertical .arrows-container')
       }
     }
   ]
